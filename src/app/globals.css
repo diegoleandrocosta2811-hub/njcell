@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #040404;
+  --foreground: #f4f4f4;
+  --nj-black: #040404;
+  --nj-dark: #242424;
+  --nj-orange: #f58220;
+  --nj-orange-dark: #e07010;
+  --nj-green: #06c402;
+  --nj-green-dark: #05a002;
+  --nj-accent: #ff9300;
+  --nj-muted: #a3bac6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-nj-black: var(--nj-black);
+  --color-nj-dark: var(--nj-dark);
+  --color-nj-orange: var(--nj-orange);
+  --color-nj-orange-dark: var(--nj-orange-dark);
+  --color-nj-green: var(--nj-green);
+  --color-nj-green-dark: var(--nj-green-dark);
+  --color-nj-accent: var(--nj-accent);
+  --color-nj-muted: var(--nj-muted);
+  --font-sans: var(--font-open-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--nj-black);
+  color: var(--foreground);
+  font-family: var(--font-open-sans), "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.container-njcell {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.section-orange {
+  background-color: var(--nj-orange);
+}
+
+.section-black {
+  background-color: var(--nj-black);
+}
+
+.card-dark {
+  background-color: var(--nj-dark);
+  border: 1px solid rgb(163 186 198 / 0.35);
+  border-radius: 30px;
+}
+
+.btn-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 6px;
+  background-color: var(--nj-green);
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.25);
+}
+
+.btn-green:hover {
+  background-color: var(--nj-green-dark);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
