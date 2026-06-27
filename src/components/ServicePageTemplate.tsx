@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import SiteImage from "./SiteImage";
 import type { Service } from "@/lib/services";
 import { getServiceBySlug } from "@/lib/services";
 import { serviceFaqs } from "@/lib/faqs";
@@ -67,14 +67,20 @@ export default function ServicePageTemplate({
                       key={image.src}
                       className="overflow-hidden rounded-2xl border border-white/10"
                     >
-                      <Image
+                      <SiteImage
                         src={image.src}
                         alt={image.alt}
+                        imageTitle={image.title ?? image.alt}
                         width={800}
                         height={1000}
                         className="h-auto w-full object-cover"
                         sizes="(max-width: 1024px) 100vw, 66vw"
                       />
+                      {(image.caption ?? image.title ?? image.alt) && (
+                        <figcaption className="border-t border-white/10 bg-nj-dark px-4 py-3 text-sm text-gray-300">
+                          {image.caption ?? image.title ?? image.alt}
+                        </figcaption>
+                      )}
                     </figure>
                   ))}
                 </div>

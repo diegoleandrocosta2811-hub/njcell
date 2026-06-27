@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SiteImage from "./SiteImage";
 
 const features = [
   {
@@ -68,9 +68,10 @@ export default function ProfessionalCare() {
           </div>
 
           <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-3xl">
-            <Image
+            <SiteImage
               src="/images/troca-vidro-tela-iphone-njcell-sorocaba.jpg"
               alt="Técnico da NJCELL realizando troca de vidro da tela de iPhone em Sorocaba"
+              imageTitle="Troca de vidro iPhone Sorocaba - NJCELL"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 90vw, 400px"

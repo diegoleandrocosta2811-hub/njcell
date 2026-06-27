@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SiteImage from "./SiteImage";
 import WhatsAppButton from "./WhatsAppButton";
 import { FOUNDED_YEAR } from "@/lib/company";
 
@@ -16,9 +16,10 @@ export default function AboutSection() {
 
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="relative min-h-[280px] overflow-hidden rounded-2xl">
-              <Image
+              <SiteImage
                 src="/images/store-main.jpg"
                 alt="Interior da loja NJCELL em Sorocaba"
+                imageTitle="Loja NJCELL assistência Apple em Sorocaba"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 500px"
@@ -28,18 +29,20 @@ export default function AboutSection() {
             <div className="flex flex-col gap-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative min-h-[130px] overflow-hidden rounded-2xl">
-                  <Image
+                  <SiteImage
                     src="/images/store-lab-1.jpg"
                     alt="Laboratório técnico NJCELL para reparo de iPhone e Mac"
+                    imageTitle="Laboratório técnico NJCELL Sorocaba"
                     fill
                     className="object-cover"
                     sizes="250px"
                   />
                 </div>
                 <div className="relative min-h-[130px] overflow-hidden rounded-2xl">
-                  <Image
+                  <SiteImage
                     src="/images/reparo-placa-iphone-microscopio-njcell-sorocaba.jpg"
                     alt="Técnico da NJCELL em laboratório com microscópio para reparo de iPhone em Sorocaba"
+                    imageTitle="Reparo em placa iPhone com microscópio - NJCELL Sorocaba"
                     fill
                     className="object-cover"
                     sizes="250px"

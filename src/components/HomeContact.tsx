@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SiteImage from "./SiteImage";
 import { ADDRESS, MAP_EMBED_URL, PHONE, WHATSAPP_URL } from "@/lib/company";
 
 export default function HomeContact() {
@@ -29,9 +29,10 @@ export default function HomeContact() {
 
           <div className="grid gap-6">
             <div className="relative min-h-[200px] overflow-hidden rounded-3xl">
-              <Image
+              <SiteImage
                 src="/images/store-lab-2.jpg"
                 alt="Área técnica da NJCELL em Sorocaba"
+                imageTitle="Laboratório técnico NJCELL Sorocaba"
                 fill
                 className="object-cover"
                 sizes="500px"

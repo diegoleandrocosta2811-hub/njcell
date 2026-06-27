@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import { LOGO_HORIZONTAL, LOGO_ALT } from "@/lib/company";
+import SiteImage from "@/components/SiteImage";
+import { LOGO_HORIZONTAL, LOGO_ALT, LOGO_TITLE } from "@/lib/company";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -37,9 +37,10 @@ export default function AdminLoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-nj-black px-4 py-16">
       <div className="card-dark w-full max-w-md p-8">
-        <Image
+        <SiteImage
           src={LOGO_HORIZONTAL}
           alt={LOGO_ALT}
+          imageTitle={LOGO_TITLE}
           width={280}
           height={187}
           className="mx-auto mb-6 h-16 w-auto"

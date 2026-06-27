@@ -1,6 +1,6 @@
-import Image from "next/image";
+import SiteImage from "./SiteImage";
 import Link from "next/link";
-import { COMPANY_NAME, INSTAGRAM_URL, LOGO_SQUARE, LOGO_ALT } from "@/lib/company";
+import { COMPANY_NAME, INSTAGRAM_URL, LOGO_SQUARE, LOGO_ALT, LOGO_TITLE } from "@/lib/company";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,9 +9,10 @@ export default function Footer() {
     <footer className="section-black py-10 text-center text-sm text-gray-400">
       <div className="container-njcell">
         <Link href="/" className="mb-6 inline-block">
-          <Image
+          <SiteImage
             src={LOGO_SQUARE}
             alt={LOGO_ALT}
+            imageTitle={LOGO_TITLE}
             width={160}
             height={160}
             className="mx-auto h-24 w-auto md:h-28"

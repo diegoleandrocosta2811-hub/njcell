@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
+import SiteImage from "./SiteImage";
 import Link from "next/link";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -44,9 +44,10 @@ export default function HomeServices() {
         <div className="grid items-stretch gap-10 pt-4 md:grid-cols-2 md:gap-8 md:pt-6">
           <article className="relative flex h-full flex-col overflow-visible">
             <DeviceFloat>
-              <Image
+              <SiteImage
                 src="/images/iphone-njcell-assistencia-tecnica-sorocaba.png"
                 alt="Conserto de iPhone em Sorocaba"
+                imageTitle="Conserto de iPhone Sorocaba - NJCELL"
                 width={432}
                 height={557}
                 className={DEVICE_IMAGE_CLASS}
@@ -77,9 +78,10 @@ export default function HomeServices() {
 
           <article className="relative flex h-full flex-col overflow-visible">
             <DeviceFloat>
-              <Image
+              <SiteImage
                 src="/images/assistencia-ipad-macbook-sorocaba-njcell.png?v=4"
                 alt="Assistência iPad e MacBook em Sorocaba"
+                imageTitle="Assistência iPad e MacBook Sorocaba - NJCELL"
                 width={766}
                 height={433}
                 unoptimized

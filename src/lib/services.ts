@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 export type ServiceImage = {
   src: string;
   alt: string;
+  title?: string;
+  caption?: string;
 };
 
 export type Service = {
@@ -67,6 +69,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-assistencia-iphone-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa realizando assistência técnica de iPhone em Sorocaba",
+        title: "Assistência técnica iPhone Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em assistência técnica Apple para iPhone em Sorocaba",
       },
     ],
   },
@@ -115,6 +119,8 @@ const servicesData: Service[] = [
       {
         src: "/images/troca-tela-iphone-desmontagem-njcell-sorocaba.jpg",
         alt: "Técnico da NJCELL desmontando iPhone para troca de tela em Sorocaba",
+        title: "Troca de tela iPhone Sorocaba - NJCELL",
+        caption: "Técnico NJCELL desmontando iPhone para substituição de display em Sorocaba",
       },
     ],
   },
@@ -160,6 +166,8 @@ const servicesData: Service[] = [
       {
         src: "/images/troca-vidro-tela-iphone-njcell-sorocaba.jpg",
         alt: "Técnico da NJCELL realizando troca de vidro da tela de iPhone em Sorocaba",
+        title: "Troca de vidro iPhone Sorocaba - NJCELL",
+        caption: "Técnico NJCELL trocando apenas o vidro da tela de iPhone em Sorocaba",
       },
     ],
   },
@@ -205,6 +213,8 @@ const servicesData: Service[] = [
       {
         src: "/images/troca-tampa-traseira-iphone-njcell-sorocaba.jpg",
         alt: "Técnico da NJCELL trocando tampa traseira de vidro de iPhone em Sorocaba",
+        title: "Troca de tampa traseira iPhone Sorocaba - NJCELL",
+        caption: "Técnico NJCELL substituindo vidro traseiro de iPhone em Sorocaba",
       },
     ],
   },
@@ -249,6 +259,8 @@ const servicesData: Service[] = [
       {
         src: "/images/troca-camera-iphone-njcell-sorocaba.jpg",
         alt: "Técnico da NJCELL segurando módulo de câmera de iPhone para troca em Sorocaba",
+        title: "Troca de câmera iPhone Sorocaba - NJCELL",
+        caption: "Técnico NJCELL com módulo de câmera para troca em iPhone em Sorocaba",
       },
     ],
   },
@@ -294,6 +306,8 @@ const servicesData: Service[] = [
       {
         src: "/images/troca-bateria-iphone-tecnico-njcell-sorocaba.jpg",
         alt: "Técnico da NJCELL realizando troca de bateria de iPhone em Sorocaba",
+        title: "Troca de bateria iPhone Sorocaba - NJCELL",
+        caption: "Técnico NJCELL realizando substituição de bateria de iPhone em Sorocaba",
       },
     ],
   },
@@ -338,6 +352,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-troca-conector-iphone-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa trocando conector de carga de iPhone em Sorocaba",
+        title: "Troca de conector iPhone Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em reparo de conector de carga de iPhone",
       },
     ],
   },
@@ -383,6 +399,8 @@ const servicesData: Service[] = [
       {
         src: "/images/reparo-placa-iphone-micro-soldagem-njcell-sorocaba.jpg",
         alt: "Técnico da NJCELL realizando microsoldagem em placa de iPhone em Sorocaba",
+        title: "Reparo em placa iPhone Sorocaba - NJCELL",
+        caption: "Técnico NJCELL em microsoldagem para reparo de placa de iPhone",
       },
     ],
   },
@@ -429,6 +447,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-reparo-face-id-iphone-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa reparando Face ID de iPhone em Sorocaba",
+        title: "Reparo Face ID iPhone Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em reparo de Face ID para iPhone",
       },
     ],
   },
@@ -477,6 +497,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-conserto-iphone-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa realizando conserto de iPhone em Sorocaba",
+        title: "Conserto de iPhone Sorocaba - NJCELL",
+        caption: "Mascote NJCELL representando conserto profissional de iPhone em Sorocaba",
       },
     ],
   },
@@ -522,6 +544,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-assistencia-macbook-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa realizando assistência técnica de MacBook em Sorocaba",
+        title: "Assistência MacBook Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em assistência técnica de MacBook",
       },
     ],
   },
@@ -567,6 +591,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-conserto-ipad-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa realizando conserto de iPad em Sorocaba",
+        title: "Conserto de iPad Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em conserto de iPad em Sorocaba",
       },
     ],
   },
@@ -611,6 +637,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-troca-tela-ipad-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa trocando tela de iPad em Sorocaba",
+        title: "Troca de tela iPad Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em troca de tela de iPad",
       },
     ],
   },
@@ -655,6 +683,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-troca-bateria-ipad-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa trocando bateria de iPad em Sorocaba",
+        title: "Troca de bateria iPad Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em troca de bateria de iPad",
       },
     ],
   },
@@ -700,6 +730,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-conserto-apple-watch-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa realizando conserto de Apple Watch em Sorocaba",
+        title: "Conserto Apple Watch Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em conserto de Apple Watch",
       },
     ],
   },
@@ -744,6 +776,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-troca-tela-apple-watch-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa trocando tela de Apple Watch em Sorocaba",
+        title: "Troca de tela Apple Watch Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em troca de tela de Apple Watch",
       },
     ],
   },
@@ -788,6 +822,8 @@ const servicesData: Service[] = [
       {
         src: "/images/raposa-troca-bateria-apple-watch-njcell-sorocaba.jpg",
         alt: "Mascote NJCELL raposa trocando bateria de Apple Watch em Sorocaba",
+        title: "Troca de bateria Apple Watch Sorocaba - NJCELL",
+        caption: "Mascote NJCELL especialista em troca de bateria de Apple Watch",
       },
     ],
   },

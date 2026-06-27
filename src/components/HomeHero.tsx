@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SiteImage from "./SiteImage";
 import WhatsAppButton from "./WhatsAppButton";
 import { WARRANTY_MONTHS } from "@/lib/company";
 
@@ -43,18 +44,20 @@ export default function HomeHero() {
 
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="relative aspect-[5/3] w-full">
-              <Image
+              <SiteImage
                 src="/images/assistencia-macbook-sorocaba-njcell.png"
                 alt="MacBook em assistência técnica na NJCELL Sorocaba"
+                imageTitle="Assistência técnica MacBook Sorocaba - NJCELL"
                 fill
                 className="object-contain object-center drop-shadow-2xl"
                 sizes="(max-width: 1024px) 90vw, 480px"
                 priority
               />
               <div className="absolute -bottom-2 right-0 w-[38%] sm:w-[34%]">
-                <Image
+                <SiteImage
                   src="/images/iphone-njcell-assistencia-tecnica-sorocaba.png"
                   alt="iPhone em conserto na NJCELL Sorocaba"
+                  imageTitle="Conserto de iPhone Sorocaba - NJCELL"
                   width={432}
                   height={557}
                   className="h-auto w-full object-contain drop-shadow-2xl"

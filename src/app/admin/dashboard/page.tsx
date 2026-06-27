@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import { LOGO_HORIZONTAL, LOGO_ALT } from "@/lib/company";
+import SiteImage from "@/components/SiteImage";
+import { LOGO_HORIZONTAL, LOGO_ALT, LOGO_TITLE } from "@/lib/company";
 
 type TrackingFormState = {
   gtmId: string;
@@ -112,9 +112,10 @@ export default function AdminDashboardPage() {
       <div className="container-njcell mx-auto max-w-3xl">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <Image
+            <SiteImage
               src={LOGO_HORIZONTAL}
               alt={LOGO_ALT}
+              imageTitle={LOGO_TITLE}
               width={240}
               height={160}
               className="h-12 w-auto shrink-0"

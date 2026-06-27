@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import SiteImage from "./SiteImage";
 import { usePathname } from "next/navigation";
-import { COMPANY_NAME, LOGO_HORIZONTAL, LOGO_ALT } from "@/lib/company";
+import { LOGO_HORIZONTAL, LOGO_ALT, LOGO_TITLE } from "@/lib/company";
 import { sitePageGroups, siteMenuLabel } from "@/lib/site-nav";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -113,9 +113,10 @@ export default function Header() {
       <div className="container-njcell">
         <div className="flex h-20 items-center justify-between gap-4">
           <Link href="/" className="flex shrink-0 items-center">
-            <Image
+            <SiteImage
               src={LOGO_HORIZONTAL}
               alt={LOGO_ALT}
+              imageTitle={LOGO_TITLE}
               width={320}
               height={213}
               className="h-12 w-auto md:h-14"

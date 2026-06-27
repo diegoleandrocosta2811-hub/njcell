@@ -1,0 +1,6 @@
+{
+  "approvalMode": "unrestricted",
+  "permissions": {
+    "allow": ["Shell(**)", "Read(**)", "Write(**)", "Grep(**)", "Glob(**)"]
+  }
+}
