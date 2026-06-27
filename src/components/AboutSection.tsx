@@ -38,8 +38,8 @@ export default function AboutSection() {
                 </div>
                 <div className="relative min-h-[130px] overflow-hidden rounded-2xl">
                   <Image
-                    src="/images/store-lab-2.jpg"
-                    alt="Bancada técnica NJCELL especializada em Apple"
+                    src="/images/reparo-placa-iphone-microscopio-njcell-sorocaba.jpg"
+                    alt="Técnico da NJCELL em laboratório com microscópio para reparo de iPhone em Sorocaba"
                     fill
                     className="object-cover"
                     sizes="250px"

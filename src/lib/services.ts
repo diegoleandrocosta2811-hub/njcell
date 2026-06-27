@@ -1,6 +1,11 @@
 import type { PageSeo } from "./seo";
 import { notFound } from "next/navigation";
 
+export type ServiceImage = {
+  src: string;
+  alt: string;
+};
+
 export type Service = {
   slug: string;
   href: string;
@@ -14,6 +19,7 @@ export type Service = {
   symptoms: string[];
   highlights: string[];
   relatedSlugs: string[];
+  images?: ServiceImage[];
 };
 
 const servicesData: Service[] = [
@@ -51,8 +57,17 @@ const servicesData: Service[] = [
     ],
     relatedSlugs: [
       "troca-de-tela-sorocaba",
-      "troca-de-bateria-sorocaba",
+      "troca-de-vidro-tela-sorocaba",
+      "troca-de-tampa-traseira-sorocaba",
+      "troca-de-cameras-sorocaba",
+      "conserto-face-id-sorocaba",
       "conserto-iphone-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-assistencia-iphone-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa realizando assistência técnica de iPhone em Sorocaba",
+      },
     ],
   },
   {
@@ -88,9 +103,153 @@ const servicesData: Service[] = [
       "Garantia de 6 meses",
     ],
     relatedSlugs: [
+      "troca-de-vidro-tela-sorocaba",
+      "troca-de-tampa-traseira-sorocaba",
+      "troca-de-cameras-sorocaba",
       "conserto-iphone-sorocaba",
       "assistencia-tecnica-celular-sorocaba",
+      "conserto-face-id-sorocaba",
       "reparo-em-placa-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/troca-tela-iphone-desmontagem-njcell-sorocaba.jpg",
+        alt: "Técnico da NJCELL desmontando iPhone para troca de tela em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "troca-de-vidro-tela-sorocaba",
+    href: "/troca-de-vidro-tela-sorocaba",
+    title: "Troca de Vidro da Tela",
+    shortTitle: "Troca de Vidro",
+    description:
+      "Substituição apenas do vidro quebrado, mantendo a tela original do iPhone quando a imagem e o touch estão ok.",
+    icon: "🪟",
+    h1: "Troca de Vidro da Tela de iPhone em Sorocaba",
+    seo: {
+      title: "Troca de Vidro da Tela iPhone em Sorocaba | NJCELL",
+      description:
+        "Vidro da tela do iPhone trincado com imagem ok? Troca só do vidro em Sorocaba, preservando o display original. Orçamento e diagnóstico na assistência Apple NJCELL.",
+      path: "/troca-de-vidro-tela-sorocaba",
+    },
+    intro: [
+      "O vidro da tela do seu iPhone quebrou, mas a imagem e o touch continuam funcionando? Na NJCELL, em Sorocaba, fazemos a troca apenas do vidro, mantendo o display original do aparelho.",
+      "Esse serviço é indicado quando só a camada externa está danificada. Avaliamos o modelo e o estado da tela para confirmar se a substituição do vidro é viável antes de iniciar o reparo.",
+    ],
+    symptoms: [
+      "Vidro trincado ou estilhaçado com imagem normal",
+      "Touch funcionando apesar do vidro quebrado",
+      "Rachaduras superficiais sem manchas no display",
+      "Vidro quebrado após queda, sem falha na imagem",
+      "Desejo de preservar a tela original do iPhone",
+    ],
+    highlights: [
+      "Mantém o display original do aparelho",
+      "Opção mais econômica quando viável",
+      "Diagnóstico antes de confirmar o serviço",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "troca-de-tela-sorocaba",
+      "troca-de-tampa-traseira-sorocaba",
+      "conserto-iphone-sorocaba",
+      "conserto-face-id-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/troca-vidro-tela-iphone-njcell-sorocaba.jpg",
+        alt: "Técnico da NJCELL realizando troca de vidro da tela de iPhone em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "troca-de-tampa-traseira-sorocaba",
+    href: "/troca-de-tampa-traseira-sorocaba",
+    title: "Troca de Tampa Traseira",
+    shortTitle: "Tampa Traseira",
+    description:
+      "Substituição da tampa traseira de vidro do iPhone quebrada, trincada ou com danos estéticos.",
+    icon: "📲",
+    h1: "Troca de Tampa Traseira de iPhone em Sorocaba",
+    seo: {
+      title: "Troca de Tampa Traseira iPhone em Sorocaba | NJCELL",
+      description:
+        "Tampa traseira do iPhone quebrada ou trincada? Troca de vidro traseiro em Sorocaba com peças de qualidade. Assistência Apple especializada na NJCELL.",
+      path: "/troca-de-tampa-traseira-sorocaba",
+    },
+    intro: [
+      "A tampa traseira do seu iPhone quebrou ou está trincada? Na NJCELL, em Sorocaba, realizamos a troca da tampa traseira com instalação profissional e acabamento cuidadoso.",
+      "Vidro traseiro danificado além de prejudicar a aparência pode expor o aparelho à umidade e poeira. Avaliamos o modelo e substituímos a peça com segurança, testando câmeras e carregamento sem fio quando aplicável.",
+    ],
+    symptoms: [
+      "Vidro traseiro trincado ou estilhaçado",
+      "Tampa traseira solta ou com recortes quebrados",
+      "Danos estéticos após queda",
+      "Risco de entrada de poeira ou umidade pela traseira",
+      "Desejo de restaurar a aparência original do iPhone",
+    ],
+    highlights: [
+      "Peças compatíveis com cada modelo",
+      "Acabamento alinhado ao aparelho",
+      "Teste após a instalação",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "troca-de-tela-sorocaba",
+      "troca-de-vidro-tela-sorocaba",
+      "troca-de-cameras-sorocaba",
+      "conserto-iphone-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/troca-tampa-traseira-iphone-njcell-sorocaba.jpg",
+        alt: "Técnico da NJCELL trocando tampa traseira de vidro de iPhone em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "troca-de-cameras-sorocaba",
+    href: "/troca-de-cameras-sorocaba",
+    title: "Troca de Câmeras",
+    shortTitle: "Troca de Câmeras",
+    description:
+      "Substituição de câmera frontal e traseira de iPhone com falha, imagem borrada ou app que não abre.",
+    icon: "📷",
+    h1: "Troca de Câmeras de iPhone em Sorocaba",
+    seo: {
+      title: "Troca de Câmeras iPhone em Sorocaba | NJCELL",
+      description:
+        "Câmera do iPhone com defeito em Sorocaba? Troca de câmera frontal e traseira com diagnóstico Apple, peças de qualidade e garantia na assistência NJCELL.",
+      path: "/troca-de-cameras-sorocaba",
+    },
+    intro: [
+      "A câmera do seu iPhone parou de funcionar, está borrada ou não abre o app? Na NJCELL, em Sorocaba, realizamos troca de câmeras frontal e traseira com diagnóstico técnico antes do reparo.",
+      "Problemas na câmera podem envolver o módulo, lente ou conexão interna. Avaliamos cada caso e indicamos a melhor solução para restaurar fotos, vídeos e chamadas com qualidade.",
+    ],
+    symptoms: [
+      "Câmera traseira com imagem borrada ou preta",
+      "Câmera frontal sem funcionar em fotos ou vídeo",
+      "App de câmera travando ou não abrindo",
+      "Foco automático que não responde",
+      "Manchas ou linhas nas fotos após queda",
+    ],
+    highlights: [
+      "Troca de câmera frontal e traseira",
+      "Diagnóstico antes do reparo",
+      "Teste de foto, vídeo e flash",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "conserto-face-id-sorocaba",
+      "conserto-iphone-sorocaba",
+      "troca-de-tela-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/troca-camera-iphone-njcell-sorocaba.jpg",
+        alt: "Técnico da NJCELL segurando módulo de câmera de iPhone para troca em Sorocaba",
+      },
     ],
   },
   {
@@ -128,7 +287,14 @@ const servicesData: Service[] = [
     relatedSlugs: [
       "conserto-iphone-sorocaba",
       "assistencia-tecnica-celular-sorocaba",
+      "conserto-face-id-sorocaba",
       "troca-de-conector-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/troca-bateria-iphone-tecnico-njcell-sorocaba.jpg",
+        alt: "Técnico da NJCELL realizando troca de bateria de iPhone em Sorocaba",
+      },
     ],
   },
   {
@@ -168,6 +334,12 @@ const servicesData: Service[] = [
       "conserto-iphone-sorocaba",
       "troca-de-bateria-sorocaba",
     ],
+    images: [
+      {
+        src: "/images/raposa-troca-conector-iphone-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa trocando conector de carga de iPhone em Sorocaba",
+      },
+    ],
   },
   {
     slug: "reparo-em-placa-sorocaba",
@@ -204,7 +376,60 @@ const servicesData: Service[] = [
     relatedSlugs: [
       "conserto-iphone-sorocaba",
       "assistencia-macbook-sorocaba",
+      "conserto-face-id-sorocaba",
       "troca-de-conector-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/reparo-placa-iphone-micro-soldagem-njcell-sorocaba.jpg",
+        alt: "Técnico da NJCELL realizando microsoldagem em placa de iPhone em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "conserto-face-id-sorocaba",
+    href: "/conserto-face-id-sorocaba",
+    title: "Reparo de Face ID",
+    shortTitle: "Face ID",
+    description:
+      "Reparo do Face ID e câmera TrueDepth para iPhone com reconhecimento facial que parou de funcionar.",
+    icon: "👤",
+    h1: "Reparo de Face ID de iPhone em Sorocaba",
+    seo: {
+      title: "Reparo Face ID iPhone em Sorocaba | NJCELL",
+      description:
+        "Face ID não funciona no iPhone? Reparo de Face ID e câmera TrueDepth em Sorocaba. Diagnóstico Apple, reparo após troca de tela ou umidade na NJCELL.",
+      path: "/conserto-face-id-sorocaba",
+    },
+    intro: [
+      "O Face ID parou de funcionar no seu iPhone? Na NJCELL, em Sorocaba, realizamos diagnóstico e reparo de Face ID com equipe especializada em produtos Apple.",
+      "Problemas no reconhecimento facial podem envolver o módulo TrueDepth, sensores infravermelhos ou falhas na placa. Avaliamos cada caso e indicamos a melhor solução antes de qualquer reparo.",
+    ],
+    symptoms: [
+      "Face ID desativado ou indisponível nas configurações",
+      "iPhone não reconhece o rosto ao desbloquear",
+      "Face ID parou após troca de tela ou queda",
+      "Câmera frontal com falha junto ao Face ID",
+      "Mensagem para reposicionar o rosto sem sucesso",
+    ],
+    highlights: [
+      "Diagnóstico do módulo TrueDepth",
+      "Reparo após troca de tela mal executada",
+      "Avaliação de placa quando necessário",
+      "Garantia de 6 meses no serviço",
+    ],
+    relatedSlugs: [
+      "troca-de-cameras-sorocaba",
+      "troca-de-tela-sorocaba",
+      "troca-de-vidro-tela-sorocaba",
+      "reparo-em-placa-sorocaba",
+      "conserto-iphone-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-reparo-face-id-iphone-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa reparando Face ID de iPhone em Sorocaba",
+      },
     ],
   },
   {
@@ -242,7 +467,17 @@ const servicesData: Service[] = [
     relatedSlugs: [
       "troca-de-tela-sorocaba",
       "troca-de-bateria-sorocaba",
+      "conserto-face-id-sorocaba",
+      "troca-de-vidro-tela-sorocaba",
+      "troca-de-tampa-traseira-sorocaba",
+      "troca-de-cameras-sorocaba",
       "assistencia-macbook-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-conserto-iphone-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa realizando conserto de iPhone em Sorocaba",
+      },
     ],
   },
   {
@@ -261,7 +496,7 @@ const servicesData: Service[] = [
       path: "/assistencia-macbook-sorocaba",
     },
     intro: [
-      "MacBook lento, com tela danificada, bateria ruim ou teclado com falha? A NJCELL oferece assistência técnica para MacBook e iMac em Sorocaba.",
+      "MacBook lento, com tela danificada, bateria ruim ou teclado com falha? A NJCELL oferece assistência técnica para MacBook e iMac em Sorocaba. Para iPad e Apple Watch, temos páginas dedicadas de conserto.",
       "Atendemos desde ajustes de sistema e formatação até substituição de componentes e reparo em placa.",
     ],
     symptoms: [
@@ -280,7 +515,280 @@ const servicesData: Service[] = [
     relatedSlugs: [
       "conserto-iphone-sorocaba",
       "reparo-em-placa-sorocaba",
+      "conserto-ipad-sorocaba",
       "assistencia-tecnica-celular-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-assistencia-macbook-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa realizando assistência técnica de MacBook em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "conserto-ipad-sorocaba",
+    href: "/conserto-ipad-sorocaba",
+    title: "Conserto de iPad",
+    shortTitle: "Conserto iPad",
+    description:
+      "Assistência técnica para iPad em Sorocaba: tela, bateria, conector e reparo em placa.",
+    icon: "📱",
+    h1: "Conserto de iPad em Sorocaba",
+    seo: {
+      title: "Conserto de iPad em Sorocaba | Assistência NJCELL",
+      description:
+        "Conserto de iPad em Sorocaba: troca de tela, bateria, conector e placa. Assistência técnica Apple especializada na NJCELL com garantia.",
+      path: "/conserto-ipad-sorocaba",
+    },
+    intro: [
+      "Seu iPad parou de funcionar, a tela quebrou ou a bateria não segura carga? A NJCELL realiza conserto de iPad em Sorocaba com diagnóstico técnico e peças de qualidade.",
+      "Atendemos modelos iPad, iPad Air, iPad Pro e iPad mini, desde troca de display até reparos mais avançados em placa.",
+    ],
+    symptoms: [
+      "Tela do iPad trincada ou touch falhando",
+      "Bateria descarregando rápido",
+      "iPad que não liga ou trava na Apple",
+      "Conector de carga com mau contato",
+      "Problemas após queda ou contato com líquido",
+    ],
+    highlights: [
+      "Especialistas em linha Apple",
+      "Diagnóstico antes do reparo",
+      "Peças compatíveis com cada modelo",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "troca-de-tela-ipad-sorocaba",
+      "troca-de-bateria-ipad-sorocaba",
+      "assistencia-macbook-sorocaba",
+      "conserto-iphone-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-conserto-ipad-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa realizando conserto de iPad em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "troca-de-tela-ipad-sorocaba",
+    href: "/troca-de-tela-ipad-sorocaba",
+    title: "Troca de Tela iPad",
+    shortTitle: "Tela iPad",
+    description:
+      "Substituição de tela para iPad com display trincado, touch defeituoso ou sem imagem.",
+    icon: "🖥️",
+    h1: "Troca de Tela de iPad em Sorocaba",
+    seo: {
+      title: "Troca de Tela iPad em Sorocaba | NJCELL",
+      description:
+        "Tela de iPad quebrada em Sorocaba? Troca de display com peças de qualidade, instalação profissional e garantia na assistência Apple NJCELL.",
+      path: "/troca-de-tela-ipad-sorocaba",
+    },
+    intro: [
+      "Tela do iPad trincada, com touch que não responde ou display sem imagem? Na NJCELL, em Sorocaba, fazemos troca de tela de iPad com instalação profissional.",
+      "Avaliamos o modelo do aparelho, testamos brilho e touch após a instalação e informamos o prazo com transparência antes de iniciar o serviço.",
+    ],
+    symptoms: [
+      "Tela trincada ou completamente quebrada",
+      "Touch falhando ou respondendo em partes",
+      "Manchas, linhas ou display sem imagem",
+      "Vidro estilhaçado com risco de corte",
+      "Tela escura mesmo com iPad ligado",
+    ],
+    highlights: [
+      "Peças de qualidade para cada modelo",
+      "Teste completo após a instalação",
+      "Atendimento para iPad Air, Pro e mini",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "conserto-ipad-sorocaba",
+      "troca-de-bateria-ipad-sorocaba",
+      "assistencia-macbook-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-troca-tela-ipad-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa trocando tela de iPad em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "troca-de-bateria-ipad-sorocaba",
+    href: "/troca-de-bateria-ipad-sorocaba",
+    title: "Troca de Bateria iPad",
+    shortTitle: "Bateria iPad",
+    description:
+      "Bateria nova para iPad com descarga rápida, aquecimento ou desligamento inesperado.",
+    icon: "🔋",
+    h1: "Troca de Bateria de iPad em Sorocaba",
+    seo: {
+      title: "Troca de Bateria iPad em Sorocaba | NJCELL",
+      description:
+        "Bateria de iPad viciada em Sorocaba? Troca com diagnóstico Apple, peças compatíveis e garantia na assistência técnica NJCELL.",
+      path: "/troca-de-bateria-ipad-sorocaba",
+    },
+    intro: [
+      "iPad descarregando rápido, desligando sozinho ou com bateria inchada? A NJCELL realiza troca de bateria de iPad em Sorocaba com diagnóstico prévio.",
+      "Uma bateria em mau estado pode causar aquecimento e quedas de desempenho. Substituímos com segurança e testamos o aparelho antes da entrega.",
+    ],
+    symptoms: [
+      "Bateria descarregando muito rápido",
+      "iPad desligando com percentual de carga",
+      "Aparelho aquecendo durante o uso ou carga",
+      "Bateria inchada ou com deformação",
+      "Necessidade constante de carregar o iPad",
+    ],
+    highlights: [
+      "Diagnóstico para confirmar o defeito",
+      "Substituição segura da bateria",
+      "Melhora imediata na autonomia",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "conserto-ipad-sorocaba",
+      "troca-de-tela-ipad-sorocaba",
+      "assistencia-macbook-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-troca-bateria-ipad-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa trocando bateria de iPad em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "conserto-apple-watch-sorocaba",
+    href: "/conserto-apple-watch-sorocaba",
+    title: "Conserto de Apple Watch",
+    shortTitle: "Apple Watch",
+    description:
+      "Assistência técnica para Apple Watch em Sorocaba: tela, bateria e reparos gerais.",
+    icon: "⌚",
+    h1: "Conserto de Apple Watch em Sorocaba",
+    seo: {
+      title: "Conserto Apple Watch em Sorocaba | Assistência NJCELL",
+      description:
+        "Conserto de Apple Watch em Sorocaba: troca de tela, bateria e diagnóstico técnico. Assistência Apple especializada na NJCELL com garantia.",
+      path: "/conserto-apple-watch-sorocaba",
+    },
+    intro: [
+      "Seu Apple Watch parou de ligar, a tela quebrou ou a bateria não dura nada? A NJCELL oferece conserto de Apple Watch em Sorocaba com equipe especializada em produtos Apple.",
+      "Atendemos diferentes séries e modelos, com diagnóstico prévio e orçamento transparente antes de qualquer reparo.",
+    ],
+    symptoms: [
+      "Tela do Apple Watch trincada ou sem touch",
+      "Bateria com autonomia muito baixa",
+      "Relógio que não liga ou reinicia sozinho",
+      "Problemas após queda ou contato com água",
+      "Pulseira ou botão digital com falha",
+    ],
+    highlights: [
+      "Especialistas em linha Apple",
+      "Diagnóstico antes do reparo",
+      "Peças compatíveis com cada série",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "troca-de-tela-apple-watch-sorocaba",
+      "troca-de-bateria-apple-watch-sorocaba",
+      "conserto-iphone-sorocaba",
+      "conserto-ipad-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-conserto-apple-watch-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa realizando conserto de Apple Watch em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "troca-de-tela-apple-watch-sorocaba",
+    href: "/troca-de-tela-apple-watch-sorocaba",
+    title: "Troca de Tela Apple Watch",
+    shortTitle: "Tela Apple Watch",
+    description:
+      "Substituição de tela e vidro do Apple Watch trincado ou com touch defeituoso.",
+    icon: "⌚",
+    h1: "Troca de Tela de Apple Watch em Sorocaba",
+    seo: {
+      title: "Troca de Tela Apple Watch em Sorocaba | NJCELL",
+      description:
+        "Tela de Apple Watch quebrada em Sorocaba? Troca de display e vidro com instalação profissional e garantia na assistência Apple NJCELL.",
+      path: "/troca-de-tela-apple-watch-sorocaba",
+    },
+    intro: [
+      "Tela do Apple Watch trincada, riscada ou com touch que não responde? Na NJCELL, em Sorocaba, realizamos troca de tela de Apple Watch com instalação cuidadosa.",
+      "Avaliamos a série e o modelo do relógio para indicar a melhor solução e testamos touch, brilho e sensores após o reparo.",
+    ],
+    symptoms: [
+      "Vidro da tela trincado ou estilhaçado",
+      "Touch falhando ou sem resposta",
+      "Display com manchas ou sem imagem",
+      "Rachaduras após queda ou impacto",
+      "Tela escura mesmo com relógio ligado",
+    ],
+    highlights: [
+      "Peças compatíveis com cada série",
+      "Instalação precisa e testada",
+      "Atendimento para Apple Watch Series e SE",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "conserto-apple-watch-sorocaba",
+      "troca-de-bateria-apple-watch-sorocaba",
+      "conserto-iphone-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-troca-tela-apple-watch-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa trocando tela de Apple Watch em Sorocaba",
+      },
+    ],
+  },
+  {
+    slug: "troca-de-bateria-apple-watch-sorocaba",
+    href: "/troca-de-bateria-apple-watch-sorocaba",
+    title: "Troca de Bateria Apple Watch",
+    shortTitle: "Bateria Apple Watch",
+    description:
+      "Bateria nova para Apple Watch que descarrega rápido ou não segura carga.",
+    icon: "🔋",
+    h1: "Troca de Bateria de Apple Watch em Sorocaba",
+    seo: {
+      title: "Troca de Bateria Apple Watch em Sorocaba | NJCELL",
+      description:
+        "Bateria de Apple Watch viciada em Sorocaba? Troca com diagnóstico técnico, peças compatíveis e garantia na assistência Apple NJCELL.",
+      path: "/troca-de-bateria-apple-watch-sorocaba",
+    },
+    intro: [
+      "Apple Watch descarregando rápido ou desligando antes do fim do dia? A NJCELL realiza troca de bateria de Apple Watch em Sorocaba com diagnóstico prévio.",
+      "Bateria desgastada reduz a autonomia e pode afetar o desempenho do relógio. Substituímos com segurança e testamos antes da entrega.",
+    ],
+    symptoms: [
+      "Bateria descarregando muito rápido",
+      "Relógio desligando com carga restante",
+      "Autonomia bem menor que o normal",
+      "Apple Watch aquecendo durante o uso",
+      "Necessidade de carregar várias vezes ao dia",
+    ],
+    highlights: [
+      "Diagnóstico para confirmar o defeito",
+      "Substituição segura da bateria",
+      "Melhora na autonomia do relógio",
+      "Garantia de 6 meses",
+    ],
+    relatedSlugs: [
+      "conserto-apple-watch-sorocaba",
+      "troca-de-tela-apple-watch-sorocaba",
+      "conserto-iphone-sorocaba",
+    ],
+    images: [
+      {
+        src: "/images/raposa-troca-bateria-apple-watch-njcell-sorocaba.jpg",
+        alt: "Mascote NJCELL raposa trocando bateria de Apple Watch em Sorocaba",
+      },
     ],
   },
 ];

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { COMPANY_NAME, INSTAGRAM_URL } from "@/lib/company";
+import { COMPANY_NAME, INSTAGRAM_URL, LOGO_SQUARE, LOGO_ALT } from "@/lib/company";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,11 +10,11 @@ export default function Footer() {
       <div className="container-njcell">
         <Link href="/" className="mb-6 inline-block">
           <Image
-            src="/logo.png"
-            alt={`Logo ${COMPANY_NAME}`}
-            width={140}
-            height={53}
-            className="mx-auto h-10 w-auto opacity-90"
+            src={LOGO_SQUARE}
+            alt={LOGO_ALT}
+            width={160}
+            height={160}
+            className="mx-auto h-24 w-auto md:h-28"
           />
         </Link>
 

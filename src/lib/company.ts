@@ -1,4 +1,10 @@
 export const COMPANY_NAME = "NJCELL";
+export const COMPANY_TAGLINE = "Apple Repair";
+
+export const LOGO_HORIZONTAL = "/logo-njcell-apple-repair-horizontal.jpg";
+export const LOGO_SQUARE = "/logo-njcell-apple-repair.jpg";
+export const LOGO_ALT =
+  "NJCELL Apple Repair - Assistência técnica Apple em Sorocaba";
 export const CITY = "Sorocaba";
 export const STATE = "SP";
 export const CITY_STATE = `${CITY}/${STATE}`;

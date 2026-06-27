@@ -8,6 +8,7 @@ import {
   PHONE,
   PHONE_RAW,
   SITE_URL,
+  LOGO_SQUARE,
   STATE,
   WHATSAPP_URL,
 } from "./company";
@@ -21,7 +22,7 @@ export type PageSeo = {
 
 export function buildMetadata(seo: PageSeo): Metadata {
   const canonical = `${SITE_URL}${seo.path}`;
-  const ogImage = seo.ogImage ?? `${SITE_URL}/logo.png`;
+  const ogImage = seo.ogImage ?? `${SITE_URL}${LOGO_SQUARE}`;
 
   return {
     title: seo.title,
@@ -50,8 +51,8 @@ export function localBusinessSchema() {
       "Assistência técnica Apple em Sorocaba. Conserto de iPhone, MacBook e iMac. Troca de tela, bateria, conectores e reparos em placa.",
     url: SITE_URL,
     telephone: `+${PHONE_RAW}`,
-    image: `${SITE_URL}/logo.png`,
-    logo: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}${LOGO_SQUARE}`,
+    logo: `${SITE_URL}${LOGO_SQUARE}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Av. Oito de Outubro, 120",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Service } from "@/lib/services";
 import { getServiceBySlug } from "@/lib/services";
 import { serviceFaqs } from "@/lib/faqs";
@@ -56,6 +57,28 @@ export default function ServicePageTemplate({
                   </p>
                 ))}
               </div>
+
+              {service.images && service.images.length > 0 && (
+                <div
+                  className={`mt-10 grid gap-4 ${service.images.length > 1 ? "sm:grid-cols-2" : ""}`}
+                >
+                  {service.images.map((image) => (
+                    <figure
+                      key={image.src}
+                      className="overflow-hidden rounded-2xl border border-white/10"
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={800}
+                        height={1000}
+                        className="h-auto w-full object-cover"
+                        sizes="(max-width: 1024px) 100vw, 66vw"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              )}
 
               <section className="mt-10" aria-labelledby="symptoms-heading">
                 <h2

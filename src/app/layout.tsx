@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import TrackingScripts from "@/components/TrackingScripts";
 import { homeSeo, buildMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -22,10 +20,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${openSans.variable} h-full`}>
       <body className="flex min-h-full flex-col antialiased">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppButton variant="floating" label="WhatsApp" />
+        <TrackingScripts />
+        {children}
       </body>
     </html>
   );

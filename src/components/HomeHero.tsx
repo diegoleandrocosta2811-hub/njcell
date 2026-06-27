@@ -21,7 +21,7 @@ export default function HomeHero() {
 
       <div className="container-njcell relative z-10 flex min-h-[92vh] items-center pb-16 pt-28">
         <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-12">
-          <div>
+          <div className="text-center lg:text-left">
             <h1
               id="hero-heading"
               className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.15]"
@@ -30,31 +30,33 @@ export default function HomeHero() {
               <span className="text-nj-accent">iPhone</span> e{" "}
               <span className="text-nj-accent">Mac</span> em Sorocaba
             </h1>
-            <p className="mb-8 max-w-xl text-lg leading-relaxed text-gray-200 md:text-xl">
+            <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-gray-200 md:text-xl lg:mx-0">
               Na NJCELL, seu aparelho Apple não fica parado! Fazemos substituição
               de tela, bateria e câmeras em{" "}
               <strong className="text-white">até 30 minutos</strong>, sempre com
               peças de qualidade e garantia de {WARRANTY_MONTHS} meses.
             </p>
-            <WhatsAppButton label="Solicitar Orçamento!" />
+            <div className="flex justify-center lg:justify-start">
+              <WhatsAppButton label="Solicitar Orçamento!" />
+            </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="relative aspect-[4/3] w-full">
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="relative aspect-[5/3] w-full">
               <Image
-                src="/images/service-mac.png"
+                src="/images/assistencia-macbook-sorocaba-njcell.png"
                 alt="MacBook em assistência técnica na NJCELL Sorocaba"
                 fill
                 className="object-contain object-center drop-shadow-2xl"
-                sizes="(max-width: 1024px) 90vw, 500px"
+                sizes="(max-width: 1024px) 90vw, 480px"
                 priority
               />
-              <div className="absolute -bottom-4 right-0 w-[45%]">
+              <div className="absolute -bottom-2 right-0 w-[38%] sm:w-[34%]">
                 <Image
-                  src="/images/service-iphone.png"
+                  src="/images/iphone-njcell-assistencia-tecnica-sorocaba.png"
                   alt="iPhone em conserto na NJCELL Sorocaba"
-                  width={280}
-                  height={400}
+                  width={432}
+                  height={557}
                   className="h-auto w-full object-contain drop-shadow-2xl"
                 />
               </div>

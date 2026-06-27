@@ -69,10 +69,10 @@ export default function ProfessionalCare() {
 
           <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-3xl">
             <Image
-              src="/images/store-lab-1.jpg"
-              alt="iPhone e MacBook em assistência técnica na NJCELL Sorocaba"
+              src="/images/troca-vidro-tela-iphone-njcell-sorocaba.jpg"
+              alt="Técnico da NJCELL realizando troca de vidro da tela de iPhone em Sorocaba"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(max-width: 1024px) 90vw, 400px"
             />
           </div>
