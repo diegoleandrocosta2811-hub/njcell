@@ -27,22 +27,26 @@ export default function HomeHero() {
         <div className="w-full max-w-2xl text-center md:mx-auto lg:mx-0 lg:text-left">
           <h1
             id="hero-heading"
-            className="mb-4 text-[1.75rem] font-bold leading-tight sm:mb-5 sm:text-4xl md:text-5xl lg:mb-6 lg:text-[3.25rem] lg:leading-[1.15]"
+            className="mb-5 text-[2rem] font-extrabold leading-[1.12] tracking-tight md:mb-6 md:text-5xl md:font-bold md:leading-tight md:tracking-normal lg:mb-6 lg:text-[3.25rem] lg:leading-[1.15]"
           >
             Soluções rápidas para seu{" "}
-            <span className="text-nj-accent">iPhone</span> e{" "}
-            <span className="text-nj-accent">Mac</span> em Sorocaba
+            <span className="font-extrabold text-nj-accent md:font-bold">iPhone</span> e{" "}
+            <span className="font-extrabold text-nj-accent md:font-bold">Mac</span> em Sorocaba
           </h1>
-          <p className="mx-auto mb-6 max-w-xl text-base leading-relaxed text-gray-200 sm:text-lg md:mb-7 md:text-xl lg:mx-0 lg:mb-8">
+          <p className="mx-auto mb-7 max-w-xl text-[1.0625rem] font-medium leading-[1.65] text-white/95 md:mb-7 md:text-xl md:font-normal md:leading-relaxed md:text-gray-200 lg:mx-0 lg:mb-8">
             Na NJCELL, seu aparelho Apple não fica parado! Fazemos substituição
             de tela, bateria e câmeras em{" "}
-            <strong className="text-white">até 30 minutos</strong>, sempre com
-            peças de qualidade e garantia de {WARRANTY_MONTHS} meses.
+            <strong className="font-bold text-white">até 30 minutos</strong>, sempre com
+            peças de qualidade e{" "}
+            <strong className="font-bold text-white">
+              garantia de {WARRANTY_MONTHS} meses
+            </strong>
+            .
           </p>
           <div className="flex justify-center lg:justify-start">
             <WhatsAppButton
               label="Solicitar Orçamento!"
-              className="px-6 py-3 text-base"
+              className="max-md:px-7 max-md:py-3.5 max-md:text-lg max-md:font-bold"
             />
           </div>
         </div>
