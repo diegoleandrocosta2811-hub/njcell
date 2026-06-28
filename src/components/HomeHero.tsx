@@ -23,7 +23,7 @@ export default function HomeHero() {
         aria-hidden="true"
       />
 
-      <div className="hero-container relative z-10 max-md:bg-nj-black max-md:pb-6 pt-24 md:flex md:min-h-[88svh] md:items-center md:pb-14 md:pt-28 lg:min-h-[92vh] lg:pb-16">
+      <div className="hero-container relative z-10 max-md:pb-0 pt-24 md:flex md:min-h-[88svh] md:items-center md:pb-14 md:pt-28 lg:min-h-[92vh] lg:pb-16">
         <div className="w-full max-w-2xl text-center md:mx-auto lg:mx-0 lg:text-left">
           <h1
             id="hero-heading"
@@ -50,7 +50,7 @@ export default function HomeHero() {
 
       {/* Mobile — raposa + bancada, logo abaixo do botão */}
       <div
-        className="relative w-full bg-contain bg-top bg-no-repeat md:hidden"
+        className="relative -mt-4 w-full bg-contain bg-top bg-no-repeat md:hidden"
         style={{
           backgroundImage: `url('${HERO_BG_MOBILE}')`,
           aspectRatio: HERO_MOBILE_ASPECT,
