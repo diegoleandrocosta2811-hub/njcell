@@ -1,72 +1,63 @@
-import Image from "next/image";
-import SiteImage from "./SiteImage";
 import WhatsAppButton from "./WhatsAppButton";
 import { WARRANTY_MONTHS } from "@/lib/company";
+
+const HERO_BG = "/images/hero-bg.png";
+const HERO_BG_MOBILE = "/images/hero-bg-mobile.png";
+const HERO_MOBILE_ASPECT = "682 / 1024";
 
 export default function HomeHero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[92vh] overflow-hidden bg-nj-black text-white"
+      className="relative overflow-hidden bg-nj-black text-white"
       aria-labelledby="hero-heading"
     >
-      <Image
-        src="/images/hero-bg.png"
-        alt=""
-        fill
-        className="object-cover object-center opacity-40"
-        priority
+      {/* Tablet e desktop — fundo atrás do texto */}
+      <div
+        className="absolute inset-0 hidden bg-cover bg-no-repeat md:block md:bg-[72%_center] lg:bg-right"
+        style={{ backgroundImage: `url('${HERO_BG}')` }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/40" />
+      <div
+        className="absolute inset-0 hidden md:block md:bg-gradient-to-r md:from-black/92 md:via-black/60 md:to-black/10 lg:from-black/85 lg:via-black/35 lg:to-transparent"
+        aria-hidden="true"
+      />
 
-      <div className="container-njcell relative z-10 flex min-h-[92vh] items-center pb-16 pt-28">
-        <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-12">
-          <div className="text-center lg:text-left">
-            <h1
-              id="hero-heading"
-              className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.15]"
-            >
-              Soluções rápidas para seu{" "}
-              <span className="text-nj-accent">iPhone</span> e{" "}
-              <span className="text-nj-accent">Mac</span> em Sorocaba
-            </h1>
-            <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-gray-200 md:text-xl lg:mx-0">
-              Na NJCELL, seu aparelho Apple não fica parado! Fazemos substituição
-              de tela, bateria e câmeras em{" "}
-              <strong className="text-white">até 30 minutos</strong>, sempre com
-              peças de qualidade e garantia de {WARRANTY_MONTHS} meses.
-            </p>
-            <div className="flex justify-center lg:justify-start">
-              <WhatsAppButton label="Solicitar Orçamento!" />
-            </div>
-          </div>
-
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-            <div className="relative aspect-[5/3] w-full">
-              <SiteImage
-                src="/images/assistencia-macbook-sorocaba-njcell.png"
-                alt="MacBook em assistência técnica na NJCELL Sorocaba"
-                imageTitle="Assistência técnica MacBook Sorocaba - NJCELL"
-                fill
-                className="object-contain object-center drop-shadow-2xl"
-                sizes="(max-width: 1024px) 90vw, 480px"
-                priority
-              />
-              <div className="absolute -bottom-2 right-0 w-[38%] sm:w-[34%]">
-                <SiteImage
-                  src="/images/iphone-njcell-assistencia-tecnica-sorocaba.png"
-                  alt="iPhone em conserto na NJCELL Sorocaba"
-                  imageTitle="Conserto de iPhone Sorocaba - NJCELL"
-                  width={432}
-                  height={557}
-                  className="h-auto w-full object-contain drop-shadow-2xl"
-                />
-              </div>
-            </div>
+      <div className="hero-container relative z-10 max-md:bg-nj-black max-md:pb-6 pt-24 md:flex md:min-h-[88svh] md:items-center md:pb-14 md:pt-28 lg:min-h-[92vh] lg:pb-16">
+        <div className="w-full max-w-2xl text-center md:mx-auto lg:mx-0 lg:text-left">
+          <h1
+            id="hero-heading"
+            className="mb-4 text-[1.75rem] font-bold leading-tight sm:mb-5 sm:text-4xl md:text-5xl lg:mb-6 lg:text-[3.25rem] lg:leading-[1.15]"
+          >
+            Soluções rápidas para seu{" "}
+            <span className="text-nj-accent">iPhone</span> e{" "}
+            <span className="text-nj-accent">Mac</span> em Sorocaba
+          </h1>
+          <p className="mx-auto mb-6 max-w-xl text-base leading-relaxed text-gray-200 sm:text-lg md:mb-7 md:text-xl lg:mx-0 lg:mb-8">
+            Na NJCELL, seu aparelho Apple não fica parado! Fazemos substituição
+            de tela, bateria e câmeras em{" "}
+            <strong className="text-white">até 30 minutos</strong>, sempre com
+            peças de qualidade e garantia de {WARRANTY_MONTHS} meses.
+          </p>
+          <div className="flex justify-center lg:justify-start">
+            <WhatsAppButton
+              label="Solicitar Orçamento!"
+              className="px-6 py-3 text-base"
+            />
           </div>
         </div>
       </div>
+
+      {/* Mobile — raposa + bancada, logo abaixo do botão */}
+      <div
+        className="relative w-full bg-contain bg-top bg-no-repeat md:hidden"
+        style={{
+          backgroundImage: `url('${HERO_BG_MOBILE}')`,
+          aspectRatio: HERO_MOBILE_ASPECT,
+        }}
+        role="img"
+        aria-label="Mascote NJCELL em assistência técnica Apple em Sorocaba"
+      />
     </section>
   );
 }
