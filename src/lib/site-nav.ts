@@ -12,7 +12,10 @@ export const sitePageGroups: { title: string; items: SiteNavItem[] }[] = [
     title: "Principal",
     items: [
       { label: "Início", href: "/" },
+      { label: "Serviços", href: "/servicos" },
       { label: "Contato", href: "/contato" },
+      { label: "Política de Privacidade", href: "/politica-de-privacidade" },
+      { label: "Termos de Uso", href: "/termos-de-uso" },
     ],
   },
   {

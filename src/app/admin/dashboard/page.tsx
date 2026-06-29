@@ -101,7 +101,11 @@ export default function AdminDashboardPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-nj-black text-gray-300">
+      <div
+        className="flex min-h-screen items-center justify-center bg-nj-black text-gray-200"
+        role="status"
+        aria-live="polite"
+      >
         Carregando painel...
       </div>
     );
@@ -130,13 +134,13 @@ export default function AdminDashboardPage() {
           <button
             type="button"
             onClick={handleLogout}
-            className="rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/5"
+            className="min-h-11 rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/5"
           >
             Sair
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="card-dark space-y-6 p-6 md:p-8">
+        <form onSubmit={handleSubmit} className="card-dark space-y-6 p-6 md:p-8" aria-label="Configurações de rastreamento">
           <Field
             id="gtmId"
             label="Google Tag Manager (GTM)"
@@ -190,13 +194,13 @@ export default function AdminDashboardPage() {
           ) : null}
 
           {error ? (
-            <p className="text-sm text-red-400" role="alert">
+            <p className="text-sm text-red-300" role="alert" aria-live="assertive">
               {error}
             </p>
           ) : null}
 
           {message ? (
-            <p className="text-sm text-nj-green" role="status">
+            <p className="text-sm text-nj-green" role="status" aria-live="polite">
               {message}
             </p>
           ) : null}
@@ -204,7 +208,7 @@ export default function AdminDashboardPage() {
           <button
             type="submit"
             disabled={saving}
-            className="rounded-xl bg-nj-green px-5 py-3 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-60"
+            className="min-h-11 rounded-xl bg-nj-green-button px-5 py-3 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-60"
           >
             {saving ? "Salvando..." : "Salvar configurações"}
           </button>
@@ -229,6 +233,8 @@ function Field({
   onChange: (value: string) => void;
   type?: "text" | "password";
 }) {
+  const hintId = `${id}-hint`;
+
   return (
     <div>
       <label htmlFor={id} className="mb-2 block text-sm font-medium text-white">
@@ -239,10 +245,13 @@ function Field({
         type={type}
         value={value}
         onChange={(event) => onChange(event.target.value)}
+        aria-describedby={hintId}
+        autoComplete="off"
         className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none ring-nj-accent focus:ring-2"
-        placeholder={hint}
       />
-      <p className="mt-2 text-xs text-gray-400">{hint}</p>
+      <p id={hintId} className="mt-2 text-xs text-gray-400">
+        {hint}
+      </p>
     </div>
   );
 }

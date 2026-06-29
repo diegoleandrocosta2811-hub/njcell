@@ -1,14 +1,20 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/company";
-import { services } from "@/lib/services";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/api/", "/_next/", "/admin/"],
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: ["/", "/llms.txt", "/llms-full.txt", "/ai.txt"],
+        disallow: ["/api/", "/admin/"],
+      },
+      {
+        userAgent: ["GPTBot", "ChatGPT-User", "ClaudeBot", "PerplexityBot", "Google-Extended"],
+        allow: ["/", "/llms.txt", "/llms-full.txt", "/ai.txt"],
+        disallow: ["/api/", "/admin/"],
+      },
+    ],
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

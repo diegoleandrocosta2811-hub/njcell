@@ -8,7 +8,8 @@
   --nj-orange: #f58220;
   --nj-orange-dark: #e07010;
   --nj-green: #06c402;
-  --nj-green-dark: #05a002;
+  --nj-green-dark: #047a00;
+  --nj-green-button: #047a00;
   --nj-accent: #ff9300;
   --nj-muted: #a3bac6;
 }
@@ -22,6 +23,7 @@
   --color-nj-orange-dark: var(--nj-orange-dark);
   --color-nj-green: var(--nj-green);
   --color-nj-green-dark: var(--nj-green-dark);
+  --color-nj-green-button: var(--nj-green-button);
   --color-nj-accent: var(--nj-accent);
   --color-nj-muted: var(--nj-muted);
   --font-sans: var(--font-open-sans);
@@ -29,6 +31,62 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--nj-accent);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--nj-accent);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  border-radius: 0.375rem;
+  background: var(--nj-accent);
+  color: var(--nj-black);
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
 }
 
 body {
@@ -83,7 +141,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   border-radius: 6px;
-  background-color: var(--nj-green);
+  background-color: var(--nj-green-button);
   padding: 0.875rem 1.75rem;
   font-size: 1rem;
   font-weight: 700;
@@ -98,4 +156,21 @@ body {
 
 details summary::-webkit-details-marker {
   display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }

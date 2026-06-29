@@ -1,5 +1,6 @@
 import SiteImage from "./SiteImage";
-import { ADDRESS, MAP_EMBED_URL, PHONE, WHATSAPP_URL } from "@/lib/company";
+import VisuallyHidden from "./VisuallyHidden";
+import { ADDRESS, MAP_EMBED_URL, PHONE, WHATSAPP_URL, GOOGLE_MAPS_URL } from "@/lib/company";
 
 export default function HomeContact() {
   return (
@@ -20,11 +21,16 @@ export default function HomeContact() {
           <div className="overflow-hidden rounded-3xl border-4 border-white/20 shadow-xl">
             <iframe
               src={MAP_EMBED_URL}
-              title="Localização da NJCELL em Sorocaba"
+              title="Mapa com a localização da loja NJCELL em Sorocaba"
               className="h-[320px] w-full md:h-[420px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
+            <p className="sr-only">
+              <a href={GOOGLE_MAPS_URL}>
+                Abrir localização da NJCELL no Google Maps
+              </a>
+            </p>
           </div>
 
           <div className="grid gap-6">
@@ -41,24 +47,37 @@ export default function HomeContact() {
 
             <div className="card-dark p-6 md:p-8">
               <div className="mb-5 flex items-start gap-4">
-                <span className="text-2xl" aria-hidden="true">💬</span>
+                <span className="text-2xl" aria-hidden="true">
+                  💬
+                </span>
                 <div>
-                  <p className="mb-1 font-bold text-white">WhatsApp</p>
+                  <p id="contact-whatsapp-label" className="mb-1 font-bold text-white">
+                    WhatsApp
+                  </p>
                   <a
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg text-nj-green hover:underline"
+                    aria-labelledby="contact-whatsapp-label"
                   >
                     {PHONE}
+                    <VisuallyHidden> (abre em nova janela)</VisuallyHidden>
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-2xl" aria-hidden="true">📍</span>
+                <span className="text-2xl" aria-hidden="true">
+                  📍
+                </span>
                 <div>
-                  <p className="mb-1 font-bold text-white">Endereço</p>
-                  <address className="not-italic leading-relaxed text-gray-300">
+                  <p id="contact-address-label" className="mb-1 font-bold text-white">
+                    Endereço
+                  </p>
+                  <address
+                    className="not-italic leading-relaxed text-gray-200"
+                    aria-labelledby="contact-address-label"
+                  >
                     {ADDRESS}
                   </address>
                 </div>

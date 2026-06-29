@@ -10,7 +10,7 @@ export const CITY = "Sorocaba";
 export const STATE = "SP";
 export const CITY_STATE = `${CITY}/${STATE}`;
 
-export const SITE_URL = "https://www.njcell.com";
+export const SITE_URL = "https://www.njcell.com.br";
 
 export const PHONE = "(15) 98112-9962";
 export const PHONE_RAW = "5515981129962";
@@ -27,6 +27,14 @@ export const BUSINESS_HOURS =
   "Segunda a sexta: 9h às 18h | Sábado: 9h às 13h";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/njcellrepair";
+
+/** URL pública do perfil no Google Maps (NAP + sameAs). */
+export const GOOGLE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Av.+Oito+de+Outubro,+120+-+Jardim+do+Paço,+Sorocaba+-+SP,+18087-080";
+
+export const ADDRESS_NEIGHBORHOOD = "Jardim do Paço";
+export const ADDRESS_POSTAL_CODE = "18087-080";
+export const ADDRESS_STREET = "Av. Oito de Outubro, 120";
 
 export const FOUNDED_YEAR = 2005;
 export const WARRANTY_MONTHS = 6;

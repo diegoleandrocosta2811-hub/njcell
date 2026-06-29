@@ -50,6 +50,7 @@ export default function HomeServices() {
                 imageTitle="Conserto de iPhone Sorocaba - NJCELL"
                 width={432}
                 height={557}
+                sizes="(max-width: 768px) 80vw, 380px"
                 className={DEVICE_IMAGE_CLASS}
               />
             </DeviceFloat>
@@ -79,12 +80,12 @@ export default function HomeServices() {
           <article className="relative flex h-full flex-col overflow-visible">
             <DeviceFloat>
               <SiteImage
-                src="/images/assistencia-ipad-macbook-sorocaba-njcell.png?v=4"
+                src="/images/assistencia-ipad-macbook-sorocaba-njcell.png"
                 alt="Assistência iPad e MacBook em Sorocaba"
                 imageTitle="Assistência iPad e MacBook Sorocaba - NJCELL"
                 width={766}
                 height={433}
-                unoptimized
+                sizes="(max-width: 768px) 80vw, 380px"
                 className={DEVICE_IMAGE_CLASS}
               />
             </DeviceFloat>

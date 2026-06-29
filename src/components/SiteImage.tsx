@@ -13,6 +13,9 @@ export default function SiteImage({
   caption,
   figureClassName,
   className,
+  priority,
+  loading,
+  quality = 80,
   ...props
 }: SiteImageProps) {
   const title =
@@ -24,6 +27,10 @@ export default function SiteImage({
       alt={alt}
       title={title}
       className={className}
+      priority={priority}
+      loading={priority ? undefined : (loading ?? "lazy")}
+      quality={quality}
+      placeholder={props.placeholder ?? "empty"}
     />
   );
 

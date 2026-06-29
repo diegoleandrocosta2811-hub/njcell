@@ -9,18 +9,20 @@ export const defaultAdminSession: AdminSession = {
 };
 
 export function getSessionOptions(): SessionOptions {
-  const password =
-    process.env.SESSION_SECRET ??
-    "development-only-secret-with-32-chars-min!!";
+  const password = process.env.SESSION_SECRET;
+
+  if (!password && process.env.NODE_ENV === "production") {
+    throw new Error("SESSION_SECRET é obrigatório em produção.");
+  }
 
   return {
-    password,
+    password: password ?? "development-only-secret-with-32-chars-min!!",
     cookieName: "njcell_admin_session",
     cookieOptions: {
       secure: process.env.NODE_ENV === "production",
       httpOnly: true,
       sameSite: "lax",
-      path: "/",
+      path: "/admin",
     },
   };
 }

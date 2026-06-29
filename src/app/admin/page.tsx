@@ -50,7 +50,7 @@ export default function AdminLoginPage() {
           Configure GTM, GA4, Pixel e API do Facebook sem precisar alterar código.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" aria-label="Login do painel administrativo">
           <div>
             <label htmlFor="password" className="mb-2 block text-sm font-medium text-gray-200">
               Senha de acesso
@@ -63,11 +63,13 @@ export default function AdminLoginPage() {
               className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none ring-nj-accent focus:ring-2"
               autoComplete="current-password"
               required
+              aria-invalid={error ? true : undefined}
+              aria-describedby={error ? "login-error" : undefined}
             />
           </div>
 
           {error ? (
-            <p className="text-sm text-red-400" role="alert">
+            <p id="login-error" className="text-sm text-red-300" role="alert" aria-live="assertive">
               {error}
             </p>
           ) : null}
@@ -75,7 +77,7 @@ export default function AdminLoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-xl bg-nj-green px-4 py-3 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-60"
+            className="min-h-11 w-full rounded-xl bg-nj-green-button px-4 py-3 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-60"
           >
             {loading ? "Entrando..." : "Entrar"}
           </button>

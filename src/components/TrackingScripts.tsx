@@ -1,9 +1,9 @@
 import Script from "next/script";
-import { getTrackingSettings } from "@/lib/tracking/store";
+import { getPublicTrackingSettings } from "@/lib/tracking/public";
 import { hasActiveTracking } from "@/lib/tracking/types";
 
-export default async function TrackingScripts() {
-  const settings = await getTrackingSettings();
+export default function TrackingScripts() {
+  const settings = getPublicTrackingSettings();
 
   if (!hasActiveTracking(settings)) {
     return null;
@@ -15,7 +15,7 @@ export default async function TrackingScripts() {
     <>
       {gtmId ? (
         <>
-          <Script id="gtm-loader" strategy="afterInteractive">
+          <Script id="gtm-loader" strategy="lazyOnload">
             {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -38,19 +38,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
-          <Script id="ga4-config" strategy="afterInteractive">
+          <Script id="ga4-config" strategy="lazyOnload">
             {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${ga4Id}');`}
+gtag('config', '${ga4Id}', { send_page_view: false });
+gtag('event', 'page_view');`}
           </Script>
         </>
       ) : null}
 
       {fbPixelId ? (
-        <Script id="facebook-pixel" strategy="afterInteractive">
+        <Script id="facebook-pixel" strategy="lazyOnload">
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};

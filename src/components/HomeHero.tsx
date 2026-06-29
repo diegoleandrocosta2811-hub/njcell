@@ -1,3 +1,4 @@
+import SiteImage from "./SiteImage";
 import WhatsAppButton from "./WhatsAppButton";
 import { WARRANTY_MONTHS } from "@/lib/company";
 
@@ -12,12 +13,17 @@ export default function HomeHero() {
       className="relative overflow-hidden bg-nj-black text-white"
       aria-labelledby="hero-heading"
     >
-      {/* Tablet e desktop — fundo atrás do texto */}
-      <div
-        className="absolute inset-0 hidden bg-cover bg-no-repeat md:block md:bg-[72%_center] lg:bg-right"
-        style={{ backgroundImage: `url('${HERO_BG}')` }}
-        aria-hidden="true"
-      />
+      {/* Tablet e desktop — fundo otimizado via next/image */}
+      <div className="absolute inset-0 hidden md:block" aria-hidden="true">
+        <SiteImage
+          src={HERO_BG}
+          alt=""
+          fill
+          sizes="100vw"
+          quality={85}
+          className="object-cover object-[72%_center] lg:object-right"
+        />
+      </div>
       <div
         className="absolute inset-0 hidden md:block md:bg-gradient-to-r md:from-black/92 md:via-black/60 md:to-black/10 lg:from-black/85 lg:via-black/35 lg:to-transparent"
         aria-hidden="true"
@@ -52,16 +58,22 @@ export default function HomeHero() {
         </div>
       </div>
 
-      {/* Mobile — raposa + bancada, logo abaixo do botão */}
+      {/* Mobile — LCP otimizado com next/image */}
       <div
-        className="relative -mt-4 w-full bg-contain bg-top bg-no-repeat md:hidden"
-        style={{
-          backgroundImage: `url('${HERO_BG_MOBILE}')`,
-          aspectRatio: HERO_MOBILE_ASPECT,
-        }}
-        role="img"
-        aria-label="Mascote NJCELL em assistência técnica Apple em Sorocaba"
-      />
+        className="relative -mt-4 w-full md:hidden"
+        style={{ aspectRatio: HERO_MOBILE_ASPECT }}
+      >
+        <SiteImage
+          src={HERO_BG_MOBILE}
+          alt="Mascote NJCELL em assistência técnica Apple em Sorocaba"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          quality={85}
+          className="object-contain object-top"
+        />
+      </div>
     </section>
   );
 }

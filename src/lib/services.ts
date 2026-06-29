@@ -829,6 +829,67 @@ const servicesData: Service[] = [
   },
 ];
 
+const serviceGroupDefinitions = [
+  {
+    slug: "iphone",
+    title: "iPhone",
+    description:
+      "Assistência completa para todos os modelos de iPhone em Sorocaba: tela, bateria, placa e mais.",
+    slugs: [
+      "assistencia-tecnica-celular-sorocaba",
+      "conserto-iphone-sorocaba",
+      "troca-de-tela-sorocaba",
+      "troca-de-vidro-tela-sorocaba",
+      "troca-de-tampa-traseira-sorocaba",
+      "troca-de-cameras-sorocaba",
+      "troca-de-bateria-sorocaba",
+      "troca-de-conector-sorocaba",
+      "reparo-em-placa-sorocaba",
+      "conserto-face-id-sorocaba",
+    ],
+  },
+  {
+    slug: "macbook",
+    title: "MacBook e iMac",
+    description:
+      "Reparos e manutenção para MacBook e iMac em Sorocaba com técnicos especializados Apple.",
+    slugs: ["assistencia-macbook-sorocaba"],
+  },
+  {
+    slug: "ipad",
+    title: "iPad",
+    description: "Conserto, troca de tela e bateria para iPad em Sorocaba.",
+    slugs: [
+      "conserto-ipad-sorocaba",
+      "troca-de-tela-ipad-sorocaba",
+      "troca-de-bateria-ipad-sorocaba",
+    ],
+  },
+  {
+    slug: "apple-watch",
+    title: "Apple Watch",
+    description: "Assistência para Apple Watch em Sorocaba: tela, bateria e reparos gerais.",
+    slugs: [
+      "conserto-apple-watch-sorocaba",
+      "troca-de-tela-apple-watch-sorocaba",
+      "troca-de-bateria-apple-watch-sorocaba",
+    ],
+  },
+] as const;
+
+const servicesBySlug = new Map(
+  servicesData.map((service) => [service.slug, service]),
+);
+
+export const serviceCatalogGroups = serviceGroupDefinitions.map((group) => ({
+  slug: group.slug,
+  title: group.title,
+  description: group.description,
+  services: group.slugs
+    .map((slug) => servicesBySlug.get(slug))
+    .filter((service): service is Service => Boolean(service)),
+}));
+
 export const services = servicesData;
 export const appleServices = servicesData;
 
