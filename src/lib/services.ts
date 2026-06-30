@@ -508,7 +508,7 @@ const servicesData: Service[] = [
     title: "Assistência MacBook",
     shortTitle: "MacBook",
     description:
-      "Conserto e manutenção de Mac e MacBook em Sorocaba.",
+      "Conserto de MacBook em Sorocaba.",
     icon: "💻",
     h1: "Assistência Técnica para MacBook em Sorocaba",
     seo: {
@@ -518,7 +518,7 @@ const servicesData: Service[] = [
       path: "/assistencia-macbook-sorocaba",
     },
     intro: [
-      "MacBook lento, com tela danificada, bateria ruim ou teclado com falha? A NJCELL oferece assistência técnica para MacBook e iMac em Sorocaba. Para iPad e Apple Watch, temos páginas dedicadas de conserto.",
+      "MacBook lento, com tela danificada, bateria ruim ou teclado com falha? A NJCELL oferece assistência técnica para MacBook em Sorocaba. Para iPad e Apple Watch, temos páginas dedicadas de conserto.",
       "Atendemos desde ajustes de sistema e formatação até substituição de componentes e reparo em placa.",
     ],
     symptoms: [
@@ -694,22 +694,21 @@ const servicesData: Service[] = [
     title: "Conserto de Apple Watch",
     shortTitle: "Apple Watch",
     description:
-      "Assistência técnica para Apple Watch em Sorocaba: tela, bateria e reparos gerais.",
+      "Assistência técnica para Apple Watch em Sorocaba: tela e reparos gerais.",
     icon: "⌚",
     h1: "Conserto de Apple Watch em Sorocaba",
     seo: {
       title: "Conserto Apple Watch em Sorocaba | Assistência NJCELL",
       description:
-        "Conserto de Apple Watch em Sorocaba: troca de tela, bateria e diagnóstico técnico. Assistência Apple especializada na NJCELL com garantia.",
+        "Conserto de Apple Watch em Sorocaba: troca de tela e diagnóstico técnico. Assistência Apple especializada na NJCELL com garantia.",
       path: "/conserto-apple-watch-sorocaba",
     },
     intro: [
-      "Seu Apple Watch parou de ligar, a tela quebrou ou a bateria não dura nada? A NJCELL oferece conserto de Apple Watch em Sorocaba com equipe especializada em produtos Apple.",
+      "Seu Apple Watch parou de ligar ou a tela quebrou? A NJCELL oferece conserto de Apple Watch em Sorocaba com equipe especializada em produtos Apple.",
       "Atendemos diferentes séries e modelos, com diagnóstico prévio e orçamento transparente antes de qualquer reparo.",
     ],
     symptoms: [
       "Tela do Apple Watch trincada ou sem touch",
-      "Bateria com autonomia muito baixa",
       "Relógio que não liga ou reinicia sozinho",
       "Problemas após queda ou contato com água",
       "Pulseira ou botão digital com falha",
@@ -722,7 +721,6 @@ const servicesData: Service[] = [
     ],
     relatedSlugs: [
       "troca-de-tela-apple-watch-sorocaba",
-      "troca-de-bateria-apple-watch-sorocaba",
       "conserto-iphone-sorocaba",
       "conserto-ipad-sorocaba",
     ],
@@ -769,7 +767,6 @@ const servicesData: Service[] = [
     ],
     relatedSlugs: [
       "conserto-apple-watch-sorocaba",
-      "troca-de-bateria-apple-watch-sorocaba",
       "conserto-iphone-sorocaba",
     ],
     images: [
@@ -778,52 +775,6 @@ const servicesData: Service[] = [
         alt: "Mascote NJCELL raposa trocando tela de Apple Watch em Sorocaba",
         title: "Troca de tela Apple Watch Sorocaba - NJCELL",
         caption: "Mascote NJCELL especialista em troca de tela de Apple Watch",
-      },
-    ],
-  },
-  {
-    slug: "troca-de-bateria-apple-watch-sorocaba",
-    href: "/troca-de-bateria-apple-watch-sorocaba",
-    title: "Troca de Bateria Apple Watch",
-    shortTitle: "Bateria Apple Watch",
-    description:
-      "Bateria nova para Apple Watch que descarrega rápido ou não segura carga.",
-    icon: "🔋",
-    h1: "Troca de Bateria de Apple Watch em Sorocaba",
-    seo: {
-      title: "Troca de Bateria Apple Watch em Sorocaba | NJCELL",
-      description:
-        "Bateria de Apple Watch viciada em Sorocaba? Troca com diagnóstico técnico, peças compatíveis e garantia na assistência Apple NJCELL.",
-      path: "/troca-de-bateria-apple-watch-sorocaba",
-    },
-    intro: [
-      "Apple Watch descarregando rápido ou desligando antes do fim do dia? A NJCELL realiza troca de bateria de Apple Watch em Sorocaba com diagnóstico prévio.",
-      "Bateria desgastada reduz a autonomia e pode afetar o desempenho do relógio. Substituímos com segurança e testamos antes da entrega.",
-    ],
-    symptoms: [
-      "Bateria descarregando muito rápido",
-      "Relógio desligando com carga restante",
-      "Autonomia bem menor que o normal",
-      "Apple Watch aquecendo durante o uso",
-      "Necessidade de carregar várias vezes ao dia",
-    ],
-    highlights: [
-      "Diagnóstico para confirmar o defeito",
-      "Substituição segura da bateria",
-      "Melhora na autonomia do relógio",
-      "Garantia de 6 meses",
-    ],
-    relatedSlugs: [
-      "conserto-apple-watch-sorocaba",
-      "troca-de-tela-apple-watch-sorocaba",
-      "conserto-iphone-sorocaba",
-    ],
-    images: [
-      {
-        src: "/images/raposa-troca-bateria-apple-watch-njcell-sorocaba.jpg",
-        alt: "Mascote NJCELL raposa trocando bateria de Apple Watch em Sorocaba",
-        title: "Troca de bateria Apple Watch Sorocaba - NJCELL",
-        caption: "Mascote NJCELL especialista em troca de bateria de Apple Watch",
       },
     ],
   },
@@ -850,9 +801,9 @@ const serviceGroupDefinitions = [
   },
   {
     slug: "macbook",
-    title: "MacBook e iMac",
+    title: "MacBook",
     description:
-      "Reparos e manutenção para MacBook e iMac em Sorocaba com técnicos especializados Apple.",
+      "Reparos para MacBook em Sorocaba com técnicos especializados Apple.",
     slugs: ["assistencia-macbook-sorocaba"],
   },
   {
@@ -868,11 +819,10 @@ const serviceGroupDefinitions = [
   {
     slug: "apple-watch",
     title: "Apple Watch",
-    description: "Assistência para Apple Watch em Sorocaba: tela, bateria e reparos gerais.",
+    description: "Assistência para Apple Watch em Sorocaba: tela e reparos gerais.",
     slugs: [
       "conserto-apple-watch-sorocaba",
       "troca-de-tela-apple-watch-sorocaba",
-      "troca-de-bateria-apple-watch-sorocaba",
     ],
   },
 ] as const;

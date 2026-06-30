@@ -96,8 +96,8 @@ export default function HomeServices() {
                 iPadOS, macOS & watchOS
               </p>
               <p className="mb-6 flex-1 leading-relaxed text-gray-300">
-                Troca de tela e bateria de iPad e Apple Watch, upgrade de memória,
-                teclado, componentes e ajustes gerais para MacBook.
+                Troca de tela de iPad e Apple Watch, troca de bateria de iPad,
+                upgrade de memória, teclado, componentes e ajustes gerais para MacBook.
               </p>
               <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <WhatsAppButton label="Solicitar Orçamento!" className="shrink-0" />

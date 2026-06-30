@@ -428,7 +428,7 @@ export function buildContactSchemaGraph(): JsonLdNode {
       path: "/contato",
       name: "Contato NJCELL | Assistência Apple em Sorocaba",
       description:
-        "Fale com a NJCELL em Sorocaba pelo WhatsApp ou visite nossa loja. Assistência técnica para iPhone, MacBook e iMac com agilidade e garantia.",
+        "Fale com a NJCELL em Sorocaba pelo WhatsApp ou visite nossa loja. Assistência técnica para iPhone, MacBook e iPad com agilidade e garantia.",
       types: ["WebPage", "ContactPage"],
       breadcrumbId: breadcrumb["@id"] as string,
     }),
@@ -541,7 +541,7 @@ export function buildServicosSchemaGraph(): JsonLdNode {
       path,
       name: "Serviços de Assistência Apple em Sorocaba | NJCELL",
       description:
-        "Lista completa dos serviços da NJCELL em Sorocaba: iPhone, iPad, MacBook, iMac e Apple Watch. Troca de tela, bateria, conector e reparo em placa.",
+        "Lista completa dos serviços da NJCELL em Sorocaba: iPhone, iPad, MacBook e Apple Watch. Troca de tela, bateria, conector e reparo em placa.",
       breadcrumbId: breadcrumb["@id"] as string,
     }),
     {

@@ -4,7 +4,7 @@ const features = [
   {
     title: "Entrega rápida",
     description:
-      "Reparos em iPhone e MacBook concluídos em até 30 minutos na maioria dos serviços.",
+      "Reparos em iPhone concluídos em até 30 minutos na maioria dos serviços.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-10 w-10">
         <circle cx="12" cy="12" r="9" />

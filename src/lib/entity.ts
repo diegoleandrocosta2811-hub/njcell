@@ -28,7 +28,7 @@ export const entity = {
     foundedYear: FOUNDED_YEAR,
     canonicalUrl: SITE_URL,
     description:
-      "Assistência técnica especializada em produtos Apple em Sorocaba/SP, com loja física, diagnóstico transparente e reparos para iPhone, iPad, MacBook, iMac e Apple Watch.",
+      "Assistência técnica especializada em produtos Apple em Sorocaba/SP, com loja física, diagnóstico transparente e reparos para iPhone, iPad, MacBook e Apple Watch.",
   },
   location: {
     city: CITY,
@@ -47,7 +47,7 @@ export const entity = {
     hours: BUSINESS_HOURS,
   },
   brands: [...BRANDS] as string[],
-  devices: ["iPhone", "iPad", "MacBook", "iMac", "Apple Watch"] as const,
+  devices: ["iPhone", "iPad", "MacBook", "Apple Watch"] as const,
   specialties: [
     "Troca de tela e vidro de iPhone",
     "Troca de bateria",

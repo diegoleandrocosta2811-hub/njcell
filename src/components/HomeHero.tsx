@@ -40,7 +40,7 @@ export default function HomeHero() {
             <span className="font-extrabold text-nj-accent md:font-bold">Mac</span> em Sorocaba
           </h1>
           <p className="mx-auto mb-7 max-w-xl text-[1.0625rem] font-medium leading-[1.65] text-white/95 md:mb-7 md:text-xl md:font-normal md:leading-relaxed md:text-gray-200 lg:mx-0 lg:mb-8">
-            Na NJCELL, seu aparelho Apple não fica parado! Fazemos substituição
+            Na NJCELL, seu aparelho Apple não fica parado! No iPhone, fazemos substituição
             de tela, bateria e câmeras em{" "}
             <strong className="font-bold text-nj-accent">até 30 minutos</strong>, sempre com
             peças de qualidade e{" "}

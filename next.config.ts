@@ -100,6 +100,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/troca-de-bateria-apple-watch-sorocaba",
+        destination: "/conserto-apple-watch-sorocaba",
+        permanent: true,
+      },
+      {
         source: "/conserto-samsung-sorocaba",
         destination: "/conserto-iphone-sorocaba",
         permanent: true,

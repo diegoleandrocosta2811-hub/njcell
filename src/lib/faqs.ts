@@ -4,7 +4,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "A NJCELL atende quais aparelhos Apple em Sorocaba?",
     answer:
-      "Atendemos iPhone, iPad, MacBook, iMac e Apple Watch. Realizamos assistência técnica especializada em produtos Apple em Sorocaba, com diagnóstico, troca de peças e reparo em placa.",
+      "Atendemos iPhone, iPad, MacBook e Apple Watch. Realizamos assistência técnica especializada em produtos Apple em Sorocaba, com diagnóstico, troca de peças e reparo em placa.",
   },
   {
     question: "Quanto tempo leva para trocar a tela ou bateria do iPhone?",
@@ -271,7 +271,7 @@ export const serviceFaqs: Record<string, FaqItem[]> = {
     {
       question: "Vocês consertam Apple Watch em Sorocaba?",
       answer:
-        "Sim. Realizamos conserto de Apple Watch com troca de tela, bateria e diagnóstico técnico para diferentes séries e modelos.",
+        "Sim. Realizamos conserto de Apple Watch com troca de tela e diagnóstico técnico para diferentes séries e modelos.",
     },
     {
       question: "Apple Watch molhado tem conserto?",
@@ -299,23 +299,6 @@ export const serviceFaqs: Record<string, FaqItem[]> = {
       question: "Quanto custa trocar a tela do Apple Watch?",
       answer:
         "O valor varia conforme a série do relógio. Fazemos orçamento gratuito após avaliar o aparelho na NJCELL.",
-    },
-  ],
-  "troca-de-bateria-apple-watch-sorocaba": [
-    {
-      question: "Como saber se preciso trocar a bateria do Apple Watch?",
-      answer:
-        "Sinais comuns são descarga muito rápida, relógio desligando antes do fim do dia e aquecimento durante o uso. Fazemos teste na loja.",
-    },
-    {
-      question: "A troca de bateria melhora a autonomia do Apple Watch?",
-      answer:
-        "Sim. Com bateria nova e desgaste corrigido, a autonomia volta a ficar mais próxima do esperado para o modelo.",
-    },
-    {
-      question: "A troca de bateria do Apple Watch tem garantia?",
-      answer:
-        "Sim. O serviço na NJCELL inclui garantia de 6 meses sobre a instalação e a peça utilizada.",
     },
   ],
 };

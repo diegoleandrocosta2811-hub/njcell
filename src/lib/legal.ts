@@ -118,7 +118,7 @@ export const termsOfUse = {
     {
       title: "2. Sobre a NJCELL",
       paragraphs: [
-        `A ${COMPANY_NAME} é assistência técnica especializada em produtos Apple, com atendimento em ${CITY}/${STATE}. Atendemos exclusivamente a marca Apple: iPhone, iPad, MacBook, iMac e Apple Watch.`,
+        `A ${COMPANY_NAME} é assistência técnica especializada em produtos Apple, com atendimento em ${CITY}/${STATE}. Atendemos exclusivamente a marca Apple: iPhone, iPad, MacBook e Apple Watch.`,
         `Endereço da loja: ${ADDRESS}.`,
       ],
     },
@@ -161,7 +161,7 @@ export const termsOfUse = {
       title: "8. Propriedade intelectual",
       paragraphs: [
         `Marcas, logotipos, textos, imagens e layout do site são de propriedade da ${COMPANY_NAME} ou de seus licenciadores. É proibida a reprodução sem autorização prévia.`,
-        "Apple, iPhone, iPad, MacBook, iMac e Apple Watch são marcas registradas da Apple Inc. A NJCELL é assistência técnica independente e não é afiliada à Apple.",
+        "Apple, iPhone, iPad, MacBook e Apple Watch são marcas registradas da Apple Inc. A NJCELL é assistência técnica independente e não é afiliada à Apple.",
       ],
     },
     {

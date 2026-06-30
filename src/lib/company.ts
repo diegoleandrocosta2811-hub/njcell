@@ -20,26 +20,25 @@ export const WHATSAPP_MESSAGE =
 export const WHATSAPP_URL = `https://wa.me/${PHONE_RAW}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export const ADDRESS =
-  "Av. Oito de Outubro, 120 - Jardim do Paço, Sorocaba - SP, 18087-080";
-export const ADDRESS_SHORT = "Av. Oito de Outubro, 120 - Jardim do Paço";
+  "Rua Vinte e Oito de Outubro, 120 - Jardim do Paço, Sorocaba - SP, 18087-080";
+export const ADDRESS_SHORT = "Rua Vinte e Oito de Outubro, 120 - Jardim do Paço";
 
-export const BUSINESS_HOURS =
-  "Segunda a sexta: 9h às 18h | Sábado: 9h às 13h";
+export const BUSINESS_HOURS = "Segunda a sexta: 10h às 17h";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/njcellrepair";
 
 /** URL pública do perfil no Google Maps (NAP + sameAs). */
 export const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Av.+Oito+de+Outubro,+120+-+Jardim+do+Paço,+Sorocaba+-+SP,+18087-080";
+  "https://www.google.com/maps/search/?api=1&query=Rua+Vinte+e+Oito+de+Outubro,+120+-+Jardim+do+Paço,+Sorocaba+-+SP,+18087-080";
 
 export const ADDRESS_NEIGHBORHOOD = "Jardim do Paço";
 export const ADDRESS_POSTAL_CODE = "18087-080";
-export const ADDRESS_STREET = "Av. Oito de Outubro, 120";
+export const ADDRESS_STREET = "Rua Vinte e Oito de Outubro, 120";
 
 export const FOUNDED_YEAR = 2005;
 export const WARRANTY_MONTHS = 6;
 
 export const MAP_EMBED_URL =
-  "https://maps.google.com/maps?q=Av.+Oito+de+Outubro,+120+-+Jardim+do+Pa%C3%A7o,+Sorocaba+-+SP&t=&z=15&ie=UTF8&iwloc=&output=embed";
+  "https://maps.google.com/maps?q=Rua+Vinte+e+Oito+de+Outubro,+120+-+Jardim+do+Pa%C3%A7o,+Sorocaba+-+SP&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
-export const BRANDS = ["iPhone", "MacBook", "iMac", "iPad", "Apple Watch"] as const;
+export const BRANDS = ["iPhone", "MacBook", "iPad", "Apple Watch"] as const;
