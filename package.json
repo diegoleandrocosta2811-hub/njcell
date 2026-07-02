@@ -2,6 +2,9 @@
   "name": "njcell",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <24"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "npm run sync:reviews && npm run generate:llms && npm run validate:schema && next build",
