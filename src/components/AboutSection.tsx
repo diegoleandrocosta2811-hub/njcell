@@ -17,11 +17,11 @@ export default function AboutSection() {
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="relative min-h-[280px] overflow-hidden rounded-2xl">
               <SiteImage
-                src="/images/store-main.jpg"
-                alt="Interior da loja NJCELL em Sorocaba"
-                imageTitle="Loja NJCELL assistência Apple em Sorocaba"
+                src="/images/reparo-placa-iphone-microscopio-njcell-sorocaba.jpg"
+                alt="Técnico da NJCELL em laboratório com microscópio para reparo de iPhone em Sorocaba"
+                imageTitle="Técnico NJCELL - assistência Apple em Sorocaba"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_20%]"
                 sizes="(max-width: 1024px) 100vw, 500px"
               />
             </div>
@@ -40,9 +40,9 @@ export default function AboutSection() {
                 </div>
                 <div className="relative min-h-[130px] overflow-hidden rounded-2xl">
                   <SiteImage
-                    src="/images/reparo-placa-iphone-microscopio-njcell-sorocaba.jpg"
-                    alt="Técnico da NJCELL em laboratório com microscópio para reparo de iPhone em Sorocaba"
-                    imageTitle="Reparo em placa iPhone com microscópio - NJCELL Sorocaba"
+                    src="/images/store-main.jpg"
+                    alt="Interior da loja NJCELL em Sorocaba"
+                    imageTitle="Loja NJCELL assistência Apple em Sorocaba"
                     fill
                     className="object-cover"
                     sizes="250px"

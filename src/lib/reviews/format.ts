@@ -21,3 +21,11 @@ export function formatRatingValue(rating: number): string {
 export function formatReviewCount(count: number): string {
   return count.toLocaleString("pt-BR");
 }
+
+/** Resumo para hero e depoimentos: "5 estrelas · +270 avaliações no Google". */
+export function formatGoogleReviewsHeadline(
+  rating: number,
+  count: number,
+): string {
+  return `${formatRatingValue(rating)} estrelas · +${formatReviewCount(count)} avaliações no Google`;
+}

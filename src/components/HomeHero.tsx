@@ -1,16 +1,12 @@
 import SiteImage from "./SiteImage";
 import WhatsAppButton from "./WhatsAppButton";
-import HeroGoogleReviews from "@/components/HeroGoogleReviews";
 import { WARRANTY_MONTHS } from "@/lib/company";
-import { getGoogleReviews, hasGoogleReviews } from "@/lib/reviews/get-google-reviews";
 
 const HERO_BG = "/images/hero-bg.png";
 const HERO_BG_MOBILE = "/images/hero-bg-mobile.png";
 const HERO_MOBILE_ASPECT = "682 / 1024";
 
-export default async function HomeHero() {
-  const googleReviews = await getGoogleReviews();
-
+export default function HomeHero() {
   return (
     <section
       id="inicio"
@@ -25,16 +21,16 @@ export default async function HomeHero() {
           fill
           sizes="100vw"
           quality={85}
-          className="object-cover object-[72%_center] lg:object-right"
+          className="object-cover object-[72%_center] lg:object-right min-[1800px]:object-[76%_center]"
         />
       </div>
       <div
-        className="absolute inset-0 hidden md:block md:bg-gradient-to-r md:from-black/92 md:via-black/60 md:to-black/10 lg:from-black/85 lg:via-black/35 lg:to-transparent"
+        className="absolute inset-0 hidden md:block md:bg-gradient-to-r md:from-black/92 md:via-black/60 md:to-black/10 lg:from-black/85 lg:via-black/35 lg:to-transparent min-[1800px]:from-black/65 min-[1800px]:via-black/25 min-[1800px]:via-[38%] min-[1800px]:to-transparent"
         aria-hidden="true"
       />
 
       <div className="hero-container relative z-10 max-md:pb-0 pt-24 md:flex md:min-h-[88svh] md:items-center md:pb-14 md:pt-28 lg:min-h-[92vh] lg:pb-16">
-        <div className="w-full max-w-2xl text-center md:mx-auto lg:mx-0 lg:text-left">
+        <div className="w-full max-w-2xl text-center md:mx-auto lg:mx-0 lg:text-left min-[1800px]:max-w-none">
           <h1
             id="hero-heading"
             className="mb-5 text-[2rem] font-extrabold leading-[1.12] tracking-tight md:mb-6 md:text-5xl md:font-bold md:leading-tight md:tracking-normal lg:mb-6 lg:text-[3.25rem] lg:leading-[1.15]"
@@ -53,10 +49,6 @@ export default async function HomeHero() {
             </strong>
             .
           </p>
-
-          {hasGoogleReviews(googleReviews) ? (
-            <HeroGoogleReviews data={googleReviews} />
-          ) : null}
 
           <div className="flex justify-center lg:justify-start">
             <WhatsAppButton

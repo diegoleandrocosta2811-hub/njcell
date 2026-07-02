@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:lan": "next dev -H 0.0.0.0",
     "build": "npm run sync:reviews && npm run generate:llms && npm run validate:schema && next build",
     "start": "next start",
     "lint": "eslint",

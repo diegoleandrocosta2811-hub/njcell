@@ -1,10 +1,7 @@
 import Link from "next/link";
 import StarRating from "@/components/StarRating";
 import { GOOGLE_MAPS_URL } from "@/lib/company";
-import {
-  formatRatingValue,
-  formatReviewCount,
-} from "@/lib/reviews/format";
+import { formatGoogleReviewsHeadline } from "@/lib/reviews/format";
 import type { GoogleReviewsData } from "@/lib/reviews/types";
 
 function QuoteIcon() {
@@ -52,8 +49,10 @@ export default function Testimonials({ data }: TestimonialsProps) {
           >
             <StarRating rating={data.summary.rating} className="text-yellow-400" />
             <span>
-              {formatRatingValue(data.summary.rating)} ·{" "}
-              {formatReviewCount(data.summary.userRatingCount)} avaliações no Google
+              {formatGoogleReviewsHeadline(
+                data.summary.rating,
+                data.summary.userRatingCount,
+              )}
             </span>
           </Link>
         </div>

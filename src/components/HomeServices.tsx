@@ -24,6 +24,20 @@ function DeviceFloat({ children }: { children: ReactNode }) {
   );
 }
 
+function ServiceCardLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-nj-accent transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nj-accent"
+    >
+      <span>{children}</span>
+      <span aria-hidden="true" className="shrink-0">
+        →
+      </span>
+    </Link>
+  );
+}
+
 export default function HomeServices() {
   return (
     <section
@@ -65,14 +79,13 @@ export default function HomeServices() {
               Face ID, conectores Tipo C e Lightning. Ajustes gerais para todos os modelos de
               iPhones.
               </p>
-              <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:items-center">
-                <WhatsAppButton label="Solicitar Orçamento!" className="shrink-0" />
-                <Link
-                  href="/conserto-iphone-sorocaba"
-                  className="text-center text-sm font-semibold text-nj-accent hover:underline"
-                >
-                  Saiba mais sobre iPhone →
-                </Link>
+              <div className="mt-auto flex flex-col gap-3">
+                <WhatsAppButton label="Solicitar Orçamento!" />
+                <div className="flex flex-wrap gap-x-5 gap-y-1">
+                  <ServiceCardLink href="/conserto-iphone-sorocaba">
+                    Saiba mais sobre iPhone
+                  </ServiceCardLink>
+                </div>
               </div>
             </div>
           </article>
@@ -99,26 +112,19 @@ export default function HomeServices() {
                 Troca de tela de iPad e Apple Watch, troca de bateria de iPad,
                 upgrade de memória, teclado, componentes e ajustes gerais para MacBook.
               </p>
-              <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                <WhatsAppButton label="Solicitar Orçamento!" className="shrink-0" />
-                <Link
-                  href="/conserto-ipad-sorocaba"
-                  className="text-center text-sm font-semibold text-nj-accent hover:underline"
-                >
-                  Conserto iPad →
-                </Link>
-                <Link
-                  href="/conserto-apple-watch-sorocaba"
-                  className="text-center text-sm font-semibold text-nj-accent hover:underline"
-                >
-                  Apple Watch →
-                </Link>
-                <Link
-                  href="/assistencia-macbook-sorocaba"
-                  className="text-center text-sm font-semibold text-nj-accent hover:underline"
-                >
-                  MacBook →
-                </Link>
+              <div className="mt-auto flex flex-col gap-3">
+                <WhatsAppButton label="Solicitar Orçamento!" />
+                <div className="flex flex-wrap gap-x-5 gap-y-1">
+                  <ServiceCardLink href="/conserto-ipad-sorocaba">
+                    Conserto iPad
+                  </ServiceCardLink>
+                  <ServiceCardLink href="/conserto-apple-watch-sorocaba">
+                    Apple Watch
+                  </ServiceCardLink>
+                  <ServiceCardLink href="/assistencia-macbook-sorocaba">
+                    MacBook
+                  </ServiceCardLink>
+                </div>
               </div>
             </div>
           </article>

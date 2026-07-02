@@ -1,0 +1,35 @@
+{
+  "placeId": "ChIJOctK3rphz5QRyn2uNkrrqt0",
+  "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJOctK3rphz5QRyn2uNkrrqt0",
+  "summary": {
+    "rating": 5,
+    "userRatingCount": 270
+  },
+  "reviews": [
+    {
+      "author": "zTheRockz FPS Gamer",
+      "rating": 5,
+      "text": "Rapidez e agilidade no atendimento, realizei a substituição da bateria, conector do carregador e flex da camera frontal, meu celular ficou novo novamente, recomendo.",
+      "publishedAt": "2024-03-12T00:00:00.000Z"
+    },
+    {
+      "author": "Denis",
+      "rating": 5,
+      "text": "Experiência ótima, o que me chamou atenção foi a honestidade e conhecimento no ramo, por eu ser de outra cidade, ficamos sempre com receio em entregar um equipamento tão pessoal e medo de passarem a perna na gente. Do começo ao fim a honestidade esteve em alta, trouxe a solução do problema com ótimo custo beneficio. Já virei cliente nota dez.",
+      "publishedAt": "2024-07-08T00:00:00.000Z"
+    },
+    {
+      "author": "Matheus Henrique",
+      "rating": 5,
+      "text": "Atendimento excelente. Entrei em contato para substituição de tela do meu celular, em menos de 1h30 já estava pronto com o serviço impecável. Super recomendo o trabalho.",
+      "publishedAt": "2024-11-21T00:00:00.000Z"
+    },
+    {
+      "author": "Ana Carolina Macedo Santos",
+      "rating": 5,
+      "text": "Simplesmente um dos melhores atendimentos que tive, rápido, eficiente e de qualidade! Simplesmente tudo o que precisamos em uma emergência com nosso telefone, com todo certeza, irei indicar e agora também tenho um contato de confiança para sempre que precisar, agradecimento ao Nivaldo e sua esposa que solucionaram meu problema o mais rápido possível!!!",
+      "publishedAt": "2025-02-14T00:00:00.000Z"
+    }
+  ],
+  "syncedAt": "2026-07-02T21:20:00.000Z"
+}

@@ -118,6 +118,26 @@ body {
     max-width: min(100%, 1360px);
     padding-left: clamp(1.5rem, 3.5vw, 3.5rem);
     padding-right: clamp(1.25rem, 2vw, 2rem);
+    margin-right: auto;
+    /* Em telas muito largas, puxa o texto para a esquerda de forma gradual */
+    margin-left: max(
+      clamp(1.5rem, 3.5vw, 3.5rem),
+      calc((100vw - 1360px) / 2 - max(0px, (100vw - 1650px) * 0.42))
+    );
+  }
+}
+
+/* Reforço em monitores bem largos (27" em 100% de escala) */
+@media (min-width: 1800px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: minmax(0, 44rem) 1fr;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    padding-left: clamp(2.5rem, 5.5vw, 7rem);
+    padding-right: clamp(1.5rem, 3vw, 4rem);
   }
 }
 
