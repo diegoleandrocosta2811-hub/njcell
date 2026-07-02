@@ -31,7 +31,7 @@ export function generateLlmsTxt(): string {
     `- Endereço: ${entity.location.address}`,
     `- Área de atendimento: ${entity.location.areaServed}`,
     `- Coordenadas: ${entity.location.coordinates.latitude}, ${entity.location.coordinates.longitude}`,
-    `- Google Maps: ${entity.identity.canonicalUrl}/contato`,
+    `- Google Maps: ${entity.contact.googleMaps}`,
     "",
     "## Contato",
     "",

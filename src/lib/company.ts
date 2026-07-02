@@ -1,3 +1,5 @@
+import { BUSINESS_HOURS as BUSINESS_HOURS_LABEL } from "./business-hours";
+
 export const COMPANY_NAME = "NJCELL";
 export const COMPANY_TAGLINE = "Apple Repair";
 
@@ -23,13 +25,22 @@ export const ADDRESS =
   "Rua Vinte e Oito de Outubro, 120 - Jardim do Paço, Sorocaba - SP, 18087-080";
 export const ADDRESS_SHORT = "Rua Vinte e Oito de Outubro, 120 - Jardim do Paço";
 
-export const BUSINESS_HOURS = "Segunda a sexta: 10h às 17h";
+export const BUSINESS_HOURS = BUSINESS_HOURS_LABEL;
 
 export const INSTAGRAM_URL = "https://www.instagram.com/njcellrepair";
 
-/** URL pública do perfil no Google Maps (NAP + sameAs). */
+/** Knowledge Graph ID do Perfil da Empresa (extraído do link oficial de compartilhamento). */
+export const GOOGLE_BUSINESS_KGMID = "/g/11pb3skc3v";
+
+/** Link curto de compartilhamento do Perfil da Empresa no Google. */
+export const GOOGLE_MAPS_SHARE_URL = "https://share.google/Ts8lm56yf8IODSo2E";
+
+/** URL canônica do perfil no Google Maps (NAP + sameAs + schema). */
 export const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Rua+Vinte+e+Oito+de+Outubro,+120+-+Jardim+do+Paço,+Sorocaba+-+SP,+18087-080";
+  process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL?.trim() ||
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    "NJCELL Apple Repair Sorocaba",
+  )}&kgmid=${encodeURIComponent(GOOGLE_BUSINESS_KGMID)}`;
 
 export const ADDRESS_NEIGHBORHOOD = "Jardim do Paço";
 export const ADDRESS_POSTAL_CODE = "18087-080";

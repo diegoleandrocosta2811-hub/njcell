@@ -1,12 +1,16 @@
 import SiteImage from "./SiteImage";
 import WhatsAppButton from "./WhatsAppButton";
+import HeroGoogleReviews from "@/components/HeroGoogleReviews";
 import { WARRANTY_MONTHS } from "@/lib/company";
+import { getGoogleReviews, hasGoogleReviews } from "@/lib/reviews/get-google-reviews";
 
 const HERO_BG = "/images/hero-bg.png";
 const HERO_BG_MOBILE = "/images/hero-bg-mobile.png";
 const HERO_MOBILE_ASPECT = "682 / 1024";
 
-export default function HomeHero() {
+export default async function HomeHero() {
+  const googleReviews = await getGoogleReviews();
+
   return (
     <section
       id="inicio"
@@ -49,6 +53,11 @@ export default function HomeHero() {
             </strong>
             .
           </p>
+
+          {hasGoogleReviews(googleReviews) ? (
+            <HeroGoogleReviews data={googleReviews} />
+          ) : null}
+
           <div className="flex justify-center lg:justify-start">
             <WhatsAppButton
               label="Solicitar Orçamento!"

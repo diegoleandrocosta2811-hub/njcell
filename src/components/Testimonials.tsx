@@ -1,25 +1,11 @@
-const testimonials = [
-  {
-    name: "Marcos A.",
-    text: "Trocaram o flex da câmera frontal do meu iPhone, ficou como novo novamente. Recomendo a NJCELL em Sorocaba.",
-    rating: 5,
-  },
-  {
-    name: "Fernanda L.",
-    text: "Fizeram a substituição de tela do meu iPhone em menos de 1h30, serviço impecável. Super recomendo!",
-    rating: 5,
-  },
-  {
-    name: "Ricardo M.",
-    text: "Levei meu MacBook lento e resolveram com upgrade de memória. Atendimento profissional e preço justo.",
-    rating: 5,
-  },
-  {
-    name: "Camila S.",
-    text: "Bateria do iPhone trocada rapidamente, com garantia e explicação clara. Melhor assistência Apple da região.",
-    rating: 5,
-  },
-];
+import Link from "next/link";
+import StarRating from "@/components/StarRating";
+import { GOOGLE_MAPS_URL } from "@/lib/company";
+import {
+  formatRatingValue,
+  formatReviewCount,
+} from "@/lib/reviews/format";
+import type { GoogleReviewsData } from "@/lib/reviews/types";
 
 function QuoteIcon() {
   return (
@@ -37,46 +23,58 @@ function QuoteIcon() {
   );
 }
 
-export default function Testimonials() {
+type TestimonialsProps = {
+  data: GoogleReviewsData;
+};
+
+export default function Testimonials({ data }: TestimonialsProps) {
+  const mapsUrl = data.googleMapsUri || GOOGLE_MAPS_URL;
+
   return (
     <section className="section-black py-16 md:py-20" aria-labelledby="testimonials-heading">
       <div className="container-njcell">
-        <div className="mb-10 flex items-center justify-center gap-4">
-          <span className="h-1 w-12 bg-nj-accent" aria-hidden="true" />
-          <h2
-            id="testimonials-heading"
-            className="text-2xl font-bold text-white md:text-3xl"
+        <div className="mb-10 flex flex-col items-center justify-center gap-3 text-center">
+          <div className="flex items-center justify-center gap-4">
+            <span className="h-1 w-12 bg-nj-accent" aria-hidden="true" />
+            <h2
+              id="testimonials-heading"
+              className="text-2xl font-bold text-white md:text-3xl"
+            >
+              O que dizem nossos clientes:
+            </h2>
+          </div>
+
+          <Link
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-wrap items-center justify-center gap-2 rounded-md text-sm text-gray-300 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nj-accent"
           >
-            O que dizem nossos clientes:
-          </h2>
+            <StarRating rating={data.summary.rating} className="text-yellow-400" />
+            <span>
+              {formatRatingValue(data.summary.rating)} ·{" "}
+              {formatReviewCount(data.summary.userRatingCount)} avaliações no Google
+            </span>
+          </Link>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          {testimonials.map((item) => (
+          {data.reviews.map((item) => (
             <blockquote
-              key={item.name}
+              key={`${item.author}-${item.publishedAt}`}
               className="rounded-2xl bg-white p-6 text-left shadow-lg"
-              cite="depoimento de cliente"
+              cite={mapsUrl}
             >
               <div className="mb-3 flex items-center justify-between">
                 <QuoteIcon />
-                <div
-                  className="flex gap-0.5 text-yellow-600"
-                  role="img"
-                  aria-label={`${item.rating} de 5 estrelas`}
-                >
-                  {Array.from({ length: item.rating }).map((_, i) => (
-                    <span key={i} aria-hidden="true">
-                      ★
-                    </span>
-                  ))}
-                </div>
+                <StarRating rating={item.rating} className="text-yellow-600" />
               </div>
               <p className="mb-4 text-sm leading-relaxed text-gray-800">
                 &ldquo;{item.text}&rdquo;
               </p>
               <footer className="text-sm font-bold text-gray-900">
-                <cite className="not-italic">{item.name}</cite>
+                <cite className="not-italic">{item.author}</cite>
+                <span className="ml-2 text-xs font-medium text-gray-500">· Google</span>
               </footer>
             </blockquote>
           ))}

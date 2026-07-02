@@ -1,3 +1,4 @@
+import { openingHoursSpecificationForSchema } from "./business-hours";
 import {
   ADDRESS_NEIGHBORHOOD,
   ADDRESS_POSTAL_CODE,
@@ -20,6 +21,7 @@ import { LEGAL_LAST_MODIFIED_ISO, SITE_CONTENT_VERSION } from "./site-meta";
 import { services } from "./services";
 import type { Service } from "./services";
 import { allSitePages } from "./site-nav";
+import type { GoogleReviewsSummary } from "./reviews/types";
 
 /** IDs canônicos — referenciados via @id para evitar duplicação no grafo. */
 export const SCHEMA_IDS = {
@@ -108,26 +110,7 @@ function geoCoordinates(): JsonLdNode {
 }
 
 function openingHoursSpecification(): JsonLdNode[] {
-  return [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-      ],
-      opens: "09:00",
-      closes: "18:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "09:00",
-      closes: "13:00",
-    },
-  ];
+  return openingHoursSpecificationForSchema();
 }
 
 function contactPointNodes(): JsonLdNode[] {
@@ -206,8 +189,19 @@ function serviceCatalogNode(): JsonLdNode {
 }
 
 /** Entidades globais reutilizadas em todas as páginas indexáveis. */
-function coreEntityNodes(): JsonLdNode[] {
+function coreEntityNodes(options?: {
+  aggregateRating?: GoogleReviewsSummary;
+}): JsonLdNode[] {
   const storeImages = storeImageObjects();
+  const aggregateRating = options?.aggregateRating
+    ? {
+        "@type": "AggregateRating" as const,
+        ratingValue: options.aggregateRating.rating,
+        reviewCount: options.aggregateRating.userRatingCount,
+        bestRating: 5,
+        worstRating: 1,
+      }
+    : undefined;
 
   return [
     logoImageObject(),
@@ -265,6 +259,7 @@ function coreEntityNodes(): JsonLdNode[] {
       ],
       potentialAction: { "@id": SCHEMA_IDS.whatsappAction },
       hasOfferCatalog: { "@id": SCHEMA_IDS.serviceCatalog },
+      ...(aggregateRating ? { aggregateRating } : {}),
     },
     whatsappPotentialAction(),
     howToNode(),
@@ -398,11 +393,13 @@ function faqPageNode(path: string, faqs: FaqItem[]): JsonLdNode {
 }
 
 /** Home — entidades globais + WebPage + FAQ + HowTo. */
-export function buildHomeSchemaGraph(): JsonLdNode {
+export function buildHomeSchemaGraph(
+  aggregateRating?: GoogleReviewsSummary,
+): JsonLdNode {
   const breadcrumb = breadcrumbNode("/", [{ name: "Início", path: "/" }]);
 
   return schemaGraph([
-    ...coreEntityNodes(),
+    ...coreEntityNodes({ aggregateRating }),
     breadcrumb,
     webPageNode({
       path: "/",
