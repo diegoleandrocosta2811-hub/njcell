@@ -55,7 +55,10 @@ export default function AboutSection() {
                 o assunto é cuidado com <strong className="text-white">iPhones e Macs</strong>.
                 Nossa equipe é formada por especialistas em eletrônica, preparados
                 para resolver desde os problemas mais simples até os mais avançados,
-                sempre com transparência, confiança e agilidade.
+                sempre com transparência, confiança e agilidade. Mantemos peças de
+                reposição em estoque para todos os aparelhos que atendemos, o que
+                possibilita conserto imediato em muitos casos, sem prazo extra para
+                chegada de componentes.
               </p>
 
               <div>

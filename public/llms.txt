@@ -4,7 +4,7 @@
 
 ## Quem somos
 
-Assistência técnica especializada em produtos Apple em Sorocaba/SP, com loja física, diagnóstico transparente e reparos para iPhone, iPad, MacBook e Apple Watch.
+Assistência técnica especializada em produtos Apple em Sorocaba/SP, com loja física, peças de reposição em estoque, diagnóstico transparente e reparos para iPhone, iPad, MacBook e Apple Watch.
 Fundada em 2005.
 
 ## Onde estamos
@@ -42,6 +42,7 @@ Fundada em 2005.
 
 ## Diferenciais
 
+- Peças de reposição em estoque para iPhone, iPad, MacBook e Apple Watch
 - Reparos em até 30 minutos na maioria dos serviços de iPhone
 - Garantia de 6 meses nos serviços realizados
 - Diagnóstico antes de qualquer intervenção
@@ -57,7 +58,7 @@ Garantia de 6 meses conforme o tipo de reparo e peça utilizada, informada no or
 
 1. **Diagnóstico** — Recebemos o aparelho e identificamos a causa do problema com equipamentos adequados.
 2. **Orçamento** — Apresentamos o valor e o prazo antes de iniciar qualquer reparo. Sem surpresas.
-3. **Reparo** — Executamos o serviço com peças de qualidade e técnicos especializados em Apple.
+3. **Reparo** — Executamos o serviço com peças de qualidade em estoque e técnicos especializados em Apple.
 4. **Teste e entrega** — Testamos o aparelho após o reparo e entregamos com garantia de 6 meses.
 
 ## Serviços (com URLs)
@@ -91,8 +92,14 @@ Garantia de 6 meses conforme o tipo de reparo e peça utilizada, informada no or
 ### A NJCELL atende quais aparelhos Apple em Sorocaba?
 Atendemos iPhone, iPad, MacBook e Apple Watch. Realizamos assistência técnica especializada em produtos Apple em Sorocaba, com diagnóstico, troca de peças e reparo em placa.
 
+### Quais modelos de iPhone a NJCELL atende em Sorocaba?
+Atendemos em Sorocaba os modelos iPhone X, iPhone 11, iPhone 11 Pro Max, iPhone 12, iPhone 12 mini, iPhone 12 Pro, iPhone 12 Pro Max, iPhone 13, iPhone 13 mini, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14, iPhone 14 Plus, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15, iPhone 15 Plus, iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16, iPhone 16 Plus, iPhone 16 Pro, iPhone 16 Pro Max, iPhone 17, iPhone 17 Plus, iPhone 17 Pro, iPhone 17 Pro Max. Realizamos diagnóstico, orçamento e reparo para todos eles na NJCELL, com peças de reposição em estoque para agilizar o serviço quando o conserto é realizado na loja.
+
 ### Quanto tempo leva para trocar a tela ou bateria do iPhone?
 Muitos serviços de troca de tela e bateria em iPhone são concluídos em até 30 minutos, dependendo do modelo. Fazemos o diagnóstico antes e informamos o prazo com clareza.
+
+### A NJCELL tem peças de reposição em estoque?
+Sim. Mantemos peças de reposição em estoque para iPhone, iPad, MacBook e Apple Watch, à disposição do técnico na loja. Isso evita espera por encomendas e possibilita conserto imediato em diversos serviços, como troca de tela, bateria e conector.
 
 ### Os reparos da NJCELL têm garantia?
 Sim. Os serviços realizados na NJCELL contam com garantia de 6 meses, conforme o tipo de reparo e peça utilizada. Tudo é explicado no orçamento antes da aprovação.

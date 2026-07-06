@@ -20,9 +20,40 @@ export type Service = {
   intro: string[];
   symptoms: string[];
   highlights: string[];
+  supportedModels?: string[];
   relatedSlugs: string[];
   images?: ServiceImage[];
 };
+
+export const IPHONE_SUPPORTED_MODELS = [
+  "iPhone X",
+  "iPhone 11",
+  "iPhone 11 Pro Max",
+  "iPhone 12",
+  "iPhone 12 mini",
+  "iPhone 12 Pro",
+  "iPhone 12 Pro Max",
+  "iPhone 13",
+  "iPhone 13 mini",
+  "iPhone 13 Pro",
+  "iPhone 13 Pro Max",
+  "iPhone 14",
+  "iPhone 14 Plus",
+  "iPhone 14 Pro",
+  "iPhone 14 Pro Max",
+  "iPhone 15",
+  "iPhone 15 Plus",
+  "iPhone 15 Pro",
+  "iPhone 15 Pro Max",
+  "iPhone 16",
+  "iPhone 16 Plus",
+  "iPhone 16 Pro",
+  "iPhone 16 Pro Max",
+  "iPhone 17",
+  "iPhone 17 Plus",
+  "iPhone 17 Pro",
+  "iPhone 17 Pro Max",
+] as const;
 
 const servicesData: Service[] = [
   {
@@ -57,6 +88,7 @@ const servicesData: Service[] = [
       "Garantia de 6 meses nos serviços",
       "Loja física em Sorocaba",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "troca-de-tela-sorocaba",
       "troca-de-vidro-tela-sorocaba",
@@ -106,6 +138,7 @@ const servicesData: Service[] = [
       "Serviço ágil na maioria dos iPhones",
       "Garantia de 6 meses",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "troca-de-vidro-tela-sorocaba",
       "troca-de-tampa-traseira-sorocaba",
@@ -156,6 +189,7 @@ const servicesData: Service[] = [
       "Diagnóstico antes de confirmar o serviço",
       "Garantia de 6 meses",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "troca-de-tela-sorocaba",
       "troca-de-tampa-traseira-sorocaba",
@@ -203,6 +237,7 @@ const servicesData: Service[] = [
       "Teste após a instalação",
       "Garantia de 6 meses",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "troca-de-tela-sorocaba",
       "troca-de-vidro-tela-sorocaba",
@@ -250,6 +285,7 @@ const servicesData: Service[] = [
       "Teste de foto, vídeo e flash",
       "Garantia de 6 meses",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "conserto-face-id-sorocaba",
       "conserto-iphone-sorocaba",
@@ -296,6 +332,7 @@ const servicesData: Service[] = [
       "Melhora imediata na autonomia",
       "Garantia de 6 meses",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "conserto-iphone-sorocaba",
       "assistencia-tecnica-celular-sorocaba",
@@ -343,6 +380,7 @@ const servicesData: Service[] = [
       "Teste de carga após o reparo",
       "Especialistas em iPhone",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "reparo-em-placa-sorocaba",
       "conserto-iphone-sorocaba",
@@ -389,6 +427,7 @@ const servicesData: Service[] = [
       "Avaliação honesta de viabilidade",
       "Equipe formada em eletrônica",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "conserto-iphone-sorocaba",
       "assistencia-macbook-sorocaba",
@@ -436,6 +475,7 @@ const servicesData: Service[] = [
       "Avaliação de placa quando necessário",
       "Garantia de 6 meses no serviço",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "troca-de-cameras-sorocaba",
       "troca-de-tela-sorocaba",
@@ -484,6 +524,7 @@ const servicesData: Service[] = [
       "Diagnóstico completo antes do reparo",
       "Garantia de 6 meses",
     ],
+    supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "troca-de-tela-sorocaba",
       "troca-de-bateria-sorocaba",

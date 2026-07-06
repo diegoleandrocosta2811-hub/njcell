@@ -86,6 +86,30 @@ export default function ServicePageTemplate({
                 </div>
               )}
 
+              {service.supportedModels && service.supportedModels.length > 0 && (
+                <section className="mt-10" aria-labelledby="supported-models-heading">
+                  <h2
+                    id="supported-models-heading"
+                    className="mb-4 text-2xl font-bold text-white"
+                  >
+                    Modelos de iPhone atendidos
+                  </h2>
+                  <ul className="grid gap-3 sm:grid-cols-2">
+                    {service.supportedModels.map((model) => (
+                      <li
+                        key={model}
+                        className="card-dark flex items-start gap-3 px-4 py-3 text-gray-200"
+                      >
+                        <span className="mt-0.5 text-nj-green" aria-hidden="true">
+                          ✓
+                        </span>
+                        {model}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
               <section className="mt-10" aria-labelledby="symptoms-heading">
                 <h2
                   id="symptoms-heading"

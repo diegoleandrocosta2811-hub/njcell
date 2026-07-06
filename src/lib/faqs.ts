@@ -1,4 +1,28 @@
 import type { FaqItem } from "./seo";
+import { IPHONE_SUPPORTED_MODELS } from "./services";
+
+const IPHONE_SERVICE_SLUGS = [
+  "assistencia-tecnica-celular-sorocaba",
+  "troca-de-tela-sorocaba",
+  "troca-de-vidro-tela-sorocaba",
+  "troca-de-tampa-traseira-sorocaba",
+  "troca-de-cameras-sorocaba",
+  "troca-de-bateria-sorocaba",
+  "troca-de-conector-sorocaba",
+  "reparo-em-placa-sorocaba",
+  "conserto-face-id-sorocaba",
+  "conserto-iphone-sorocaba",
+] as const;
+
+function buildIphoneModelsAnswer(): string {
+  const models = IPHONE_SUPPORTED_MODELS.join(", ");
+  return `Atendemos em Sorocaba os modelos ${models}. Realizamos diagnóstico, orçamento e reparo para todos eles na NJCELL, com peças de reposição em estoque para agilizar o serviço quando o conserto é realizado na loja.`;
+}
+
+export const iphoneModelsFaq: FaqItem = {
+  question: "Quais modelos de iPhone a NJCELL atende em Sorocaba?",
+  answer: buildIphoneModelsAnswer(),
+};
 
 export const homeFaqs: FaqItem[] = [
   {
@@ -6,10 +30,16 @@ export const homeFaqs: FaqItem[] = [
     answer:
       "Atendemos iPhone, iPad, MacBook e Apple Watch. Realizamos assistência técnica especializada em produtos Apple em Sorocaba, com diagnóstico, troca de peças e reparo em placa.",
   },
+  iphoneModelsFaq,
   {
     question: "Quanto tempo leva para trocar a tela ou bateria do iPhone?",
     answer:
       "Muitos serviços de troca de tela e bateria em iPhone são concluídos em até 30 minutos, dependendo do modelo. Fazemos o diagnóstico antes e informamos o prazo com clareza.",
+  },
+  {
+    question: "A NJCELL tem peças de reposição em estoque?",
+    answer:
+      "Sim. Mantemos peças de reposição em estoque para iPhone, iPad, MacBook e Apple Watch, à disposição do técnico na loja. Isso evita espera por encomendas e possibilita conserto imediato em diversos serviços, como troca de tela, bateria e conector.",
   },
   {
     question: "Os reparos da NJCELL têm garantia?",
@@ -125,11 +155,7 @@ export const serviceFaqs: Record<string, FaqItem[]> = {
       answer:
         "Sim. A troca de bateria de iPhone na NJCELL inclui garantia de 6 meses sobre o serviço e a peça instalada.",
     },
-    {
-      question: "Vocês trocam bateria de todos os modelos de iPhone?",
-      answer:
-        "Sim. Realizamos troca de bateria para iPhone em Sorocaba, desde modelos mais antigos até linhas recentes.",
-    },
+    iphoneModelsFaq,
   ],
   "troca-de-conector-sorocaba": [
     {
@@ -183,11 +209,7 @@ export const serviceFaqs: Record<string, FaqItem[]> = {
     },
   ],
   "conserto-iphone-sorocaba": [
-    {
-      question: "Vocês consertam todos os modelos de iPhone?",
-      answer:
-        "Atendemos desde modelos mais antigos até linhas recentes de iPhone, incluindo troca de tela, bateria, câmera, conector e placa em Sorocaba.",
-    },
+    iphoneModelsFaq,
     {
       question: "A troca de tela de iPhone perde qualidade?",
       answer:
@@ -302,3 +324,15 @@ export const serviceFaqs: Record<string, FaqItem[]> = {
     },
   ],
 };
+
+for (const slug of IPHONE_SERVICE_SLUGS) {
+  const faqs = serviceFaqs[slug];
+  if (!faqs) continue;
+
+  const hasModelsFaq = faqs.some(
+    (faq) => faq.question === iphoneModelsFaq.question,
+  );
+  if (!hasModelsFaq) {
+    serviceFaqs[slug] = [iphoneModelsFaq, ...faqs];
+  }
+}

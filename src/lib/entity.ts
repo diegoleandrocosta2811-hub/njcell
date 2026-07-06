@@ -29,7 +29,7 @@ export const entity = {
     foundedYear: FOUNDED_YEAR,
     canonicalUrl: SITE_URL,
     description:
-      "Assistência técnica especializada em produtos Apple em Sorocaba/SP, com loja física, diagnóstico transparente e reparos para iPhone, iPad, MacBook e Apple Watch.",
+      "Assistência técnica especializada em produtos Apple em Sorocaba/SP, com loja física, peças de reposição em estoque, diagnóstico transparente e reparos para iPhone, iPad, MacBook e Apple Watch.",
   },
   location: {
     city: CITY,
@@ -63,6 +63,7 @@ export const entity = {
     "Conserto de Apple Watch",
   ],
   differentiators: [
+    "Peças de reposição em estoque para iPhone, iPad, MacBook e Apple Watch",
     "Reparos em até 30 minutos na maioria dos serviços de iPhone",
     `Garantia de ${WARRANTY_MONTHS} meses nos serviços realizados`,
     "Diagnóstico antes de qualquer intervenção",
@@ -88,7 +89,7 @@ export const entity = {
     {
       step: 3,
       name: "Reparo",
-      text: "Executamos o serviço com peças de qualidade e técnicos especializados em Apple.",
+      text: "Executamos o serviço com peças de qualidade em estoque e técnicos especializados em Apple.",
     },
     {
       step: 4,
@@ -114,6 +115,7 @@ export const entityKnowsAbout = [
   "Conserto de Apple Watch",
   "Troca de tela",
   "Troca de bateria",
+  "Peças de reposição em estoque",
   "Reparo em placa",
   "Microsoldagem",
   "Reparo Face ID",
