@@ -1,0 +1,162 @@
+.ads-page {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
+  background: #040404;
+  color: #fff;
+}
+
+.ads-header,
+.ads-footer {
+  flex-shrink: 0;
+  background: #040404;
+}
+
+.ads-header {
+  display: flex;
+  justify-content: center;
+  padding: 1.75rem 1.25rem 1.5rem;
+}
+
+.ads-header__logo {
+  display: block;
+  height: 5.5rem;
+  width: auto;
+}
+
+.ads-main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background: #f58220;
+  padding: 2.25rem 1.5rem;
+}
+
+.ads-card {
+  width: min(100%, 22.5rem);
+  overflow: hidden;
+  border-radius: 2rem;
+  background: #040404;
+  box-shadow: 0 18px 42px rgb(0 0 0 / 35%);
+}
+
+.ads-card__media {
+  background: #040404;
+  padding: 1rem 0.75rem 0.25rem;
+}
+
+.ads-card__media img,
+.ads-card__phones {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ads-card__body {
+  padding: 0.85rem 1.75rem 2rem;
+  text-align: center;
+}
+
+.ads-card__title {
+  margin: 0 0 1.35rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.ads-cta {
+  display: inline-flex;
+  width: 100%;
+  max-width: 17.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 9999px;
+  background: #06c402;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 28%);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.ads-cta:hover {
+  background: #05a302;
+}
+
+.ads-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.ads-footer {
+  padding: 2rem 1.25rem 2.35rem;
+  text-align: center;
+}
+
+.ads-footer__logo {
+  display: block;
+  height: 5rem;
+  width: auto;
+  margin: 0 auto 1.35rem;
+}
+
+.ads-footer__copy {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #b8b8b8;
+}
+
+.ads-footer__legal {
+  margin: 0 0 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.ads-footer__instagram {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.ads-footer__instagram:hover {
+  opacity: 0.8;
+}
+
+.ads-footer__instagram:focus-visible {
+  outline: 2px solid #ff9300;
+  outline-offset: 3px;
+}
+
+@media (min-width: 480px) {
+  .ads-header__logo {
+    height: 6rem;
+  }
+
+  .ads-footer__logo {
+    height: 5.5rem;
+  }
+
+  .ads-card {
+    width: min(100%, 24rem);
+  }
+
+  .ads-card__title {
+    font-size: 1.45rem;
+  }
+}

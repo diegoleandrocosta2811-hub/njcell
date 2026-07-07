@@ -21,6 +21,10 @@ export const WHATSAPP_MESSAGE =
   "Olá, vim do site e gostaria de um atendimento especializado NJCELL!";
 export const WHATSAPP_URL = `https://wa.me/${PHONE_RAW}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
+export const WHATSAPP_MESSAGE_ADS =
+  "Olá, vim da campanha Google Ads e gostaria de um atendimento especializado NJCELL!";
+export const WHATSAPP_ADS_URL = `https://wa.me/${PHONE_RAW}?text=${encodeURIComponent(WHATSAPP_MESSAGE_ADS)}`;
+
 export const ADDRESS =
   "Rua Vinte e Oito de Outubro, 120 - Jardim do Paço, Sorocaba - SP, 18087-080";
 export const ADDRESS_SHORT = "Rua Vinte e Oito de Outubro, 120 - Jardim do Paço";
