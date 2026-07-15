@@ -4,6 +4,7 @@ import { SITE_CONTENT_VERSION } from "@/lib/site-meta";
 import { services } from "@/lib/services";
 
 const lastModified = new Date(SITE_CONTENT_VERSION);
+const siteOgImage = `${SITE_URL}/images/hero-bg.png`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -12,18 +13,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
+      images: [siteOgImage],
     },
     {
       url: `${SITE_URL}/servicos`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.95,
+      images: [siteOgImage],
     },
     {
       url: `${SITE_URL}/contato`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
+      images: [siteOgImage],
     },
     {
       url: `${SITE_URL}/politica-de-privacidade`,
@@ -44,28 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: "monthly",
     priority: 0.9,
+    images: service.images?.map((image) => `${SITE_URL}${image.src}`),
   }));
 
-  const aiFiles: MetadataRoute.Sitemap = [
-    {
-      url: `${SITE_URL}/llms.txt`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.5,
-    },
-    {
-      url: `${SITE_URL}/llms-full.txt`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.5,
-    },
-    {
-      url: `${SITE_URL}/ai.txt`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.5,
-    },
-  ];
-
-  return [...staticPages, ...servicePages, ...aiFiles];
+  return [...staticPages, ...servicePages];
 }

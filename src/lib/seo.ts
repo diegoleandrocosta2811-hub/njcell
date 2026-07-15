@@ -23,6 +23,9 @@ export const SITE_METADATA_BASE = new URL(SITE_URL);
 const DEFAULT_OG_IMAGE = LOGO_SQUARE;
 const DEFAULT_OG_WIDTH = 1024;
 const DEFAULT_OG_HEIGHT = 1024;
+const SITE_OG_IMAGE = "/images/hero-bg.png";
+const SITE_OG_WIDTH = 1024;
+const SITE_OG_HEIGHT = 532;
 
 export const defaultViewport: Viewport = {
   themeColor: [
@@ -51,14 +54,18 @@ function inferImageType(url: string): string {
 function buildOgImages(seo: PageSeo) {
   const imagePath = seo.ogImage ?? DEFAULT_OG_IMAGE;
   const url = resolveAbsoluteUrl(imagePath);
+  const width =
+    seo.ogImageWidth ?? (imagePath === DEFAULT_OG_IMAGE ? DEFAULT_OG_WIDTH : undefined);
+  const height =
+    seo.ogImageHeight ?? (imagePath === DEFAULT_OG_IMAGE ? DEFAULT_OG_HEIGHT : undefined);
 
   return [
     {
       url,
       secureUrl: url,
       alt: `${COMPANY_NAME} - Assistência Técnica Apple em ${CITY}`,
-      width: seo.ogImageWidth ?? DEFAULT_OG_WIDTH,
-      height: seo.ogImageHeight ?? DEFAULT_OG_HEIGHT,
+      ...(width ? { width } : {}),
+      ...(height ? { height } : {}),
       type: inferImageType(url),
     },
   ];
@@ -156,8 +163,6 @@ export function buildServiceMetadata(service: Service): Metadata {
   return buildMetadata({
     ...service.seo,
     ogImage,
-    ogImageWidth: service.seo.ogImageWidth ?? 1200,
-    ogImageHeight: service.seo.ogImageHeight ?? 630,
   });
 }
 
@@ -166,9 +171,9 @@ export const homeSeo: PageSeo = {
   description:
     "Assistência técnica Apple em Sorocaba. Conserto de iPhone, MacBook e iPad. Troca de tela, bateria, conectores e reparos com atendimento especializado.",
   path: "/",
-  ogImage: "/images/store-main.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+  ogImage: SITE_OG_IMAGE,
+  ogImageWidth: SITE_OG_WIDTH,
+  ogImageHeight: SITE_OG_HEIGHT,
 };
 
 export const contactSeo: PageSeo = {
@@ -176,9 +181,9 @@ export const contactSeo: PageSeo = {
   description:
     "Fale com a NJCELL em Sorocaba pelo WhatsApp ou visite nossa loja. Assistência técnica para iPhone, MacBook e iPad com agilidade e garantia.",
   path: "/contato",
-  ogImage: "/images/store-main.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+  ogImage: SITE_OG_IMAGE,
+  ogImageWidth: SITE_OG_WIDTH,
+  ogImageHeight: SITE_OG_HEIGHT,
 };
 
 export const servicosSeo: PageSeo = {
@@ -186,9 +191,9 @@ export const servicosSeo: PageSeo = {
   description:
     "Todos os serviços da NJCELL em Sorocaba: conserto de iPhone, iPad, MacBook e Apple Watch. Troca de tela, bateria, conector e reparo em placa com garantia.",
   path: "/servicos",
-  ogImage: "/images/hero-devices.png",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+  ogImage: SITE_OG_IMAGE,
+  ogImageWidth: SITE_OG_WIDTH,
+  ogImageHeight: SITE_OG_HEIGHT,
 };
 
 export const privacySeo: PageSeo = {
@@ -196,9 +201,9 @@ export const privacySeo: PageSeo = {
   description:
     "Política de Privacidade da NJCELL em Sorocaba. Saiba como coletamos, usamos e protegemos seus dados pessoais conforme a LGPD.",
   path: "/politica-de-privacidade",
-  ogImage: "/images/store-main.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+  ogImage: SITE_OG_IMAGE,
+  ogImageWidth: SITE_OG_WIDTH,
+  ogImageHeight: SITE_OG_HEIGHT,
 };
 
 export const termsSeo: PageSeo = {
@@ -206,9 +211,9 @@ export const termsSeo: PageSeo = {
   description:
     "Termos de Uso do site da NJCELL. Condições para utilização do site e contratação dos serviços de assistência Apple em Sorocaba.",
   path: "/termos-de-uso",
-  ogImage: "/images/store-main.jpg",
-  ogImageWidth: 1200,
-  ogImageHeight: 630,
+  ogImage: SITE_OG_IMAGE,
+  ogImageWidth: SITE_OG_WIDTH,
+  ogImageHeight: SITE_OG_HEIGHT,
 };
 
 export const notFoundSeo: PageSeo = {

@@ -20,9 +20,7 @@ export default async function HomePage() {
   return (
     <>
       <StructuredData
-        data={buildHomeSchemaGraph(
-          hasGoogleReviews(googleReviews) ? googleReviews.summary : undefined,
-        )}
+        data={buildHomeSchemaGraph()}
       />
       <HomeHero />
       <AboutSection />

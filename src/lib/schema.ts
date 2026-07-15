@@ -21,7 +21,6 @@ import { LEGAL_LAST_MODIFIED_ISO, SITE_CONTENT_VERSION } from "./site-meta";
 import { services } from "./services";
 import type { Service } from "./services";
 import { allSitePages } from "./site-nav";
-import type { GoogleReviewsSummary } from "./reviews/types";
 
 /** IDs canônicos — referenciados via @id para evitar duplicação no grafo. */
 export const SCHEMA_IDS = {
@@ -189,19 +188,8 @@ function serviceCatalogNode(): JsonLdNode {
 }
 
 /** Entidades globais reutilizadas em todas as páginas indexáveis. */
-function coreEntityNodes(options?: {
-  aggregateRating?: GoogleReviewsSummary;
-}): JsonLdNode[] {
+function coreEntityNodes(): JsonLdNode[] {
   const storeImages = storeImageObjects();
-  const aggregateRating = options?.aggregateRating
-    ? {
-        "@type": "AggregateRating" as const,
-        ratingValue: options.aggregateRating.rating,
-        reviewCount: options.aggregateRating.userRatingCount,
-        bestRating: 5,
-        worstRating: 1,
-      }
-    : undefined;
 
   return [
     logoImageObject(),
@@ -259,7 +247,6 @@ function coreEntityNodes(options?: {
       ],
       potentialAction: { "@id": SCHEMA_IDS.whatsappAction },
       hasOfferCatalog: { "@id": SCHEMA_IDS.serviceCatalog },
-      ...(aggregateRating ? { aggregateRating } : {}),
     },
     whatsappPotentialAction(),
     howToNode(),
@@ -346,8 +333,6 @@ function serviceImageObject(
     "@id": `${absoluteUrl(servicePath)}#service-image`,
     url: absoluteUrl(imageSrc),
     contentUrl: absoluteUrl(imageSrc),
-    width: 800,
-    height: 1000,
     caption,
   };
 }
@@ -367,6 +352,13 @@ function repairServiceNode(service: Service): JsonLdNode {
     brand: { "@type": "Brand", name: "Apple" },
     provider: { "@id": SCHEMA_IDS.localBusiness },
     areaServed: { "@type": "City", name: CITY },
+    offers: {
+      "@type": "Offer",
+      url: serviceUrl,
+      priceCurrency: "BRL",
+      availability: "https://schema.org/InStock",
+      seller: { "@id": SCHEMA_IDS.localBusiness },
+    },
     ...(primaryImage
       ? {
           image: { "@id": `${serviceUrl}#service-image` },
@@ -393,13 +385,11 @@ function faqPageNode(path: string, faqs: FaqItem[]): JsonLdNode {
 }
 
 /** Home — entidades globais + WebPage + FAQ + HowTo. */
-export function buildHomeSchemaGraph(
-  aggregateRating?: GoogleReviewsSummary,
-): JsonLdNode {
+export function buildHomeSchemaGraph(): JsonLdNode {
   const breadcrumb = breadcrumbNode("/", [{ name: "Início", path: "/" }]);
 
   return schemaGraph([
-    ...coreEntityNodes({ aggregateRating }),
+    ...coreEntityNodes(),
     breadcrumb,
     webPageNode({
       path: "/",

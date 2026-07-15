@@ -24,17 +24,6 @@ export default function ResourceHints() {
         <link key={href} rel="dns-prefetch" href={href} />
       ))}
       <link rel="dns-prefetch" href="https://maps.google.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
-      />
-      <link
-        rel="alternate"
-        type="text/plain"
-        href="/llms.txt"
-        title="NJCELL — Documentação para IA"
-      />
     </>
   );
 }

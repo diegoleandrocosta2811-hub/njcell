@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: `${COMPANY_NAME} — Atendimento para iOS`,
   description:
     "Assistência técnica Apple em Sorocaba. Solicite seu orçamento pelo WhatsApp.",
+  alternates: {
+    canonical: "/ads",
+  },
   robots: {
     index: false,
     follow: false,

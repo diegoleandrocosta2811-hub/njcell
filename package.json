@@ -11,9 +11,9 @@
     "build": "npm run sync:reviews && npm run generate:llms && npm run validate:schema && next build",
     "start": "next start",
     "lint": "eslint",
-    "sync:reviews": "npx tsx scripts/sync-google-reviews.ts",
-    "generate:llms": "npx tsx scripts/generate-llms.ts",
-    "validate:schema": "npx tsx scripts/validate-schema.ts",
+    "sync:reviews": "node --import tsx scripts/sync-google-reviews.ts",
+    "generate:llms": "node --import tsx scripts/generate-llms.ts",
+    "validate:schema": "node --import tsx scripts/validate-schema.ts",
     "optimize:images": "bash scripts/optimize-images.sh"
   },
   "dependencies": {
@@ -32,6 +32,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
+    "tsx": "^4.23.1",
     "typescript": "^5"
   }
 }

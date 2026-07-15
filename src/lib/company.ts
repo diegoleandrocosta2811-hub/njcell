@@ -36,15 +36,16 @@ export const INSTAGRAM_URL = "https://www.instagram.com/njcellrepair";
 /** Knowledge Graph ID do Perfil da Empresa (extraído do link oficial de compartilhamento). */
 export const GOOGLE_BUSINESS_KGMID = "/g/11pb3skc3v";
 
+/** Place ID canônico do Perfil da Empresa no Google Maps. */
+export const GOOGLE_PLACE_ID = "ChIJOctK3rphz5QRyn2uNkrrqt0";
+
 /** Link curto de compartilhamento do Perfil da Empresa no Google. */
 export const GOOGLE_MAPS_SHARE_URL = "https://share.google/Ts8lm56yf8IODSo2E";
 
 /** URL canônica do perfil no Google Maps (NAP + sameAs + schema). */
 export const GOOGLE_MAPS_URL =
   process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL?.trim() ||
-  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    "NJCELL Apple Repair Sorocaba",
-  )}&kgmid=${encodeURIComponent(GOOGLE_BUSINESS_KGMID)}`;
+  `https://www.google.com/maps/place/?q=place_id:${GOOGLE_PLACE_ID}`;
 
 export const ADDRESS_NEIGHBORHOOD = "Jardim do Paço";
 export const ADDRESS_POSTAL_CODE = "18087-080";
