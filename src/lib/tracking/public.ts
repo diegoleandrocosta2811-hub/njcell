@@ -6,11 +6,13 @@ import {
   type TrackingSettings,
 } from "./types";
 
+const defaultGtmId = "GTM-NR35M5B6";
+
 /** Leitura síncrona — evita dynamic rendering no layout e melhora TTFB. */
 export function getPublicTrackingSettings(): TrackingSettings {
   const fromEnv: TrackingSettings = {
     ...emptyTrackingSettings(),
-    gtmId: process.env.NEXT_PUBLIC_GTM_ID?.trim() ?? "",
+    gtmId: process.env.NEXT_PUBLIC_GTM_ID?.trim() || defaultGtmId,
     ga4Id: process.env.NEXT_PUBLIC_GA4_ID?.trim() ?? "",
     fbPixelId: process.env.NEXT_PUBLIC_FB_PIXEL_ID?.trim() ?? "",
   };

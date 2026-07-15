@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
+    qualities: [75, 80, 85],
   },
   experimental: {
     optimizePackageImports: ["@/components", "@/lib"],
@@ -69,19 +70,6 @@ const nextConfig: NextConfig = {
       {
         source: "/ai.txt",
         headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
-      },
-      {
-        source: "/_next/static/:path*",
-        headers: [{ key: "Cache-Control", value: staticAssetCache }],
-      },
-      {
-        source: "/_next/image",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, stale-while-revalidate=86400",
-          },
-        ],
       },
     ];
   },

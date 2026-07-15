@@ -19,7 +19,7 @@ export default function HomeHero() {
           src={HERO_BG}
           alt=""
           fill
-          sizes="100vw"
+          sizes="(min-width: 768px) 100vw, 0px"
           quality={85}
           className="object-cover object-[72%_center] lg:object-right min-[1800px]:object-[76%_center]"
         />
@@ -70,7 +70,7 @@ export default function HomeHero() {
           fill
           priority
           fetchPriority="high"
-          sizes="100vw"
+          sizes="(max-width: 767px) 100vw, 0px"
           quality={85}
           className="object-contain object-top"
         />

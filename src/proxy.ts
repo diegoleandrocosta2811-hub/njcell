@@ -1,8 +1,8 @@
-import { NextResponse, type NextRequest } from "next/server";
 import { getIronSession } from "iron-session";
+import { NextResponse, type NextRequest } from "next/server";
 import { getSessionOptions, type AdminSession } from "@/lib/admin/session";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const response = NextResponse.next();
   const session = await getIronSession<AdminSession>(
     request,
