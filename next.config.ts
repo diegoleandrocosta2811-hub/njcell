@@ -93,6 +93,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/assistencia-macbook-sorocaba",
+        destination: "/servicos",
+        permanent: true,
+      },
+      {
         source: "/conserto-samsung-sorocaba",
         destination: "/conserto-iphone-sorocaba",
         permanent: true,

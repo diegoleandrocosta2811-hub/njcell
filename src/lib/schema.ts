@@ -257,7 +257,7 @@ function coreEntityNodes(): JsonLdNode[] {
       url: SITE_URL,
       name: COMPANY_NAME,
       description:
-        "Assistência técnica Apple em Sorocaba. Conserto de iPhone, MacBook, iPad e Apple Watch.",
+        "Assistência técnica Apple em Sorocaba. Conserto de iPhone, iPad e Apple Watch.",
       inLanguage: "pt-BR",
       publisher: { "@id": SCHEMA_IDS.organization },
       copyrightHolder: { "@id": SCHEMA_IDS.organization },
@@ -393,7 +393,7 @@ export function buildHomeSchemaGraph(): JsonLdNode {
     breadcrumb,
     webPageNode({
       path: "/",
-      name: "NJCELL | Assistência Técnica iPhone e Mac Sorocaba",
+      name: "NJCELL | Assistência Técnica iPhone e iPad Sorocaba",
       description: entity.identity.description,
       breadcrumbId: breadcrumb["@id"] as string,
     }),
@@ -415,7 +415,7 @@ export function buildContactSchemaGraph(): JsonLdNode {
       path: "/contato",
       name: "Contato NJCELL | Assistência Apple em Sorocaba",
       description:
-        "Fale com a NJCELL em Sorocaba pelo WhatsApp ou visite nossa loja. Assistência técnica para iPhone, MacBook e iPad com agilidade e garantia.",
+        "Fale com a NJCELL em Sorocaba pelo WhatsApp ou visite nossa loja. Assistência técnica para iPhone, iPad e Apple Watch com agilidade e garantia.",
       types: ["WebPage", "ContactPage"],
       breadcrumbId: breadcrumb["@id"] as string,
     }),
@@ -528,7 +528,7 @@ export function buildServicosSchemaGraph(): JsonLdNode {
       path,
       name: "Serviços de Assistência Apple em Sorocaba | NJCELL",
       description:
-        "Lista completa dos serviços da NJCELL em Sorocaba: iPhone, iPad, MacBook e Apple Watch. Troca de tela, bateria, conector e reparo em placa.",
+        "Lista completa dos serviços da NJCELL em Sorocaba: iPhone, iPad e Apple Watch. Troca de tela, bateria, conector e reparo em placa.",
       breadcrumbId: breadcrumb["@id"] as string,
     }),
     {

@@ -401,7 +401,7 @@ const servicesData: Service[] = [
     title: "Reparo em Placa iPhone",
     shortTitle: "Reparo em Placa",
     description:
-      "Diagnóstico e correção de falhas avançadas em placa de iPhone e Mac.",
+      "Diagnóstico e correção de falhas avançadas em placa de iPhone e iPad.",
     icon: "🔧",
     h1: "Reparo em Placa de iPhone em Sorocaba",
     seo: {
@@ -430,7 +430,6 @@ const servicesData: Service[] = [
     supportedModels: [...IPHONE_SUPPORTED_MODELS],
     relatedSlugs: [
       "conserto-iphone-sorocaba",
-      "assistencia-macbook-sorocaba",
       "conserto-face-id-sorocaba",
       "troca-de-conector-sorocaba",
     ],
@@ -532,7 +531,6 @@ const servicesData: Service[] = [
       "troca-de-vidro-tela-sorocaba",
       "troca-de-tampa-traseira-sorocaba",
       "troca-de-cameras-sorocaba",
-      "assistencia-macbook-sorocaba",
     ],
     images: [
       {
@@ -540,53 +538,6 @@ const servicesData: Service[] = [
         alt: "Mascote NJCELL raposa realizando conserto de iPhone em Sorocaba",
         title: "Conserto de iPhone Sorocaba - NJCELL",
         caption: "Mascote NJCELL representando conserto profissional de iPhone em Sorocaba",
-      },
-    ],
-  },
-  {
-    slug: "assistencia-macbook-sorocaba",
-    href: "/assistencia-macbook-sorocaba",
-    title: "Assistência MacBook",
-    shortTitle: "MacBook",
-    description:
-      "Conserto de MacBook em Sorocaba.",
-    icon: "💻",
-    h1: "Assistência Técnica para MacBook em Sorocaba",
-    seo: {
-      title: "Assistência MacBook em Sorocaba | Conserto NJCELL",
-      description:
-        "Assistência técnica MacBook em Sorocaba: tela, bateria, teclado, lentidão e sistema. Diagnóstico Apple com profissionais especializados na NJCELL.",
-      path: "/assistencia-macbook-sorocaba",
-    },
-    intro: [
-      "MacBook lento, com tela danificada, bateria ruim ou teclado com falha? A NJCELL oferece assistência técnica para MacBook em Sorocaba. Para iPad e Apple Watch, temos páginas dedicadas de conserto.",
-      "Atendemos desde ajustes de sistema e formatação até substituição de componentes e reparo em placa.",
-    ],
-    symptoms: [
-      "MacBook lento ou travando",
-      "Tela com manchas, linhas ou sem imagem",
-      "Bateria com pouca autonomia",
-      "Teclado com teclas falhando",
-      "Problemas no macOS ou após umidade",
-    ],
-    highlights: [
-      "Especialistas em linha Apple",
-      "Upgrade de memória e componentes",
-      "Formatação e ajustes de sistema",
-      "Diagnóstico técnico completo",
-    ],
-    relatedSlugs: [
-      "conserto-iphone-sorocaba",
-      "reparo-em-placa-sorocaba",
-      "conserto-ipad-sorocaba",
-      "assistencia-tecnica-celular-sorocaba",
-    ],
-    images: [
-      {
-        src: "/images/raposa-assistencia-macbook-njcell-sorocaba.jpg",
-        alt: "Mascote NJCELL raposa realizando assistência técnica de MacBook em Sorocaba",
-        title: "Assistência MacBook Sorocaba - NJCELL",
-        caption: "Mascote NJCELL especialista em assistência técnica de MacBook",
       },
     ],
   },
@@ -625,7 +576,6 @@ const servicesData: Service[] = [
     relatedSlugs: [
       "troca-de-tela-ipad-sorocaba",
       "troca-de-bateria-ipad-sorocaba",
-      "assistencia-macbook-sorocaba",
       "conserto-iphone-sorocaba",
     ],
     images: [
@@ -672,7 +622,6 @@ const servicesData: Service[] = [
     relatedSlugs: [
       "conserto-ipad-sorocaba",
       "troca-de-bateria-ipad-sorocaba",
-      "assistencia-macbook-sorocaba",
     ],
     images: [
       {
@@ -718,7 +667,6 @@ const servicesData: Service[] = [
     relatedSlugs: [
       "conserto-ipad-sorocaba",
       "troca-de-tela-ipad-sorocaba",
-      "assistencia-macbook-sorocaba",
     ],
     images: [
       {
@@ -839,13 +787,6 @@ const serviceGroupDefinitions = [
       "reparo-em-placa-sorocaba",
       "conserto-face-id-sorocaba",
     ],
-  },
-  {
-    slug: "macbook",
-    title: "MacBook",
-    description:
-      "Reparos para MacBook em Sorocaba com técnicos especializados Apple.",
-    slugs: ["assistencia-macbook-sorocaba"],
   },
   {
     slug: "ipad",

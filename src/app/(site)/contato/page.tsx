@@ -85,7 +85,7 @@ export default function ContatoPage() {
 
       <Hero
         title="Fale com a NJCELL em Sorocaba"
-        subtitle="Tire dúvidas, solicite orçamento ou agende seu atendimento. Estamos prontos para ajudar com iPhone, MacBook e iPad."
+        subtitle="Tire dúvidas, solicite orçamento ou agende seu atendimento. Estamos prontos para ajudar com iPhone, iPad e Apple Watch."
         headingId="contato-hero-heading"
       />
 
