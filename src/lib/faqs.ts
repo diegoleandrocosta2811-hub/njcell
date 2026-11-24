@@ -26,9 +26,9 @@ export const iphoneModelsFaq: FaqItem = {
 
 export const homeFaqs: FaqItem[] = [
   {
-    question: "A NJCELL atende quais aparelhos Apple em Sorocaba?",
+    question: "A NJCELL atende quais aparelhos em Sorocaba?",
     answer:
-      "Atendemos iPhone, iPad e Apple Watch. Realizamos assistência técnica especializada em produtos Apple em Sorocaba, com diagnóstico, troca de peças e reparo em placa.",
+      "Somos especialistas em iPhone. Realizamos assistência técnica para todos os modelos de iPhone em Sorocaba, com diagnóstico, troca de peças e reparo em placa.",
   },
   iphoneModelsFaq,
   {
@@ -39,7 +39,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "A NJCELL tem peças de reposição em estoque?",
     answer:
-      "Sim. Mantemos peças de reposição em estoque para iPhone, iPad e Apple Watch, à disposição do técnico na loja. Isso evita espera por encomendas e possibilita conserto imediato em diversos serviços, como troca de tela, bateria e conector.",
+      "Sim. Mantemos peças de reposição em estoque para iPhone, à disposição do técnico na loja. Isso evita espera por encomendas e possibilita conserto imediato em diversos serviços, como troca de tela, bateria e conector.",
   },
   {
     question: "Os reparos da NJCELL têm garantia?",
@@ -47,7 +47,7 @@ export const homeFaqs: FaqItem[] = [
       "Sim. Os serviços realizados na NJCELL contam com garantia de 6 meses, conforme o tipo de reparo e peça utilizada. Tudo é explicado no orçamento antes da aprovação.",
   },
   {
-    question: "Preciso agendar para levar meu iPhone ou iPad?",
+    question: "Preciso agendar para levar meu iPhone?",
     answer:
       "Não é obrigatório agendar. Você pode falar conosco pelo WhatsApp ou vir direto à loja em Sorocaba para diagnóstico e orçamento sem compromisso.",
   },
@@ -219,91 +219,6 @@ export const serviceFaqs: Record<string, FaqItem[]> = {
       question: "Fazem diagnóstico de iPhone com problema na placa?",
       answer:
         "Sim. Nossa equipe técnica avalia iPhones que não ligam, reiniciam sozinhos ou apresentam falhas avançadas.",
-    },
-  ],
-  "conserto-ipad-sorocaba": [
-    {
-      question: "Vocês consertam todos os modelos de iPad?",
-      answer:
-        "Sim. Atendemos iPad, iPad Air, iPad Pro e iPad mini em Sorocaba, com troca de tela, bateria e reparos mais avançados.",
-    },
-    {
-      question: "Quanto tempo leva para trocar a tela do iPad?",
-      answer:
-        "O prazo varia conforme o modelo. Após o diagnóstico e aprovação do orçamento, informamos o tempo estimado com clareza.",
-    },
-    {
-      question: "iPad molhado tem conserto?",
-      answer:
-        "Depende da extensão do dano. Quanto antes o aparelho for avaliado na NJCELL, maiores as chances de recuperação.",
-    },
-  ],
-  "troca-de-tela-ipad-sorocaba": [
-    {
-      question: "Quanto custa a troca de tela de iPad em Sorocaba?",
-      answer:
-        "O valor varia conforme o modelo do iPad e o tipo de display. Fazemos orçamento gratuito após avaliar o aparelho na NJCELL.",
-    },
-    {
-      question: "Vocês trocam tela de iPad com touch que não responde?",
-      answer:
-        "Sim. Trocamos telas com touch falhando, trincadas, com manchas ou sem imagem para iPad Air, Pro e mini.",
-    },
-    {
-      question: "A troca de tela do iPad tem garantia?",
-      answer:
-        "Sim. O serviço inclui garantia de 6 meses sobre a instalação e a peça utilizada.",
-    },
-  ],
-  "troca-de-bateria-ipad-sorocaba": [
-    {
-      question: "Como saber se preciso trocar a bateria do iPad?",
-      answer:
-        "Sinais comuns são descarga rápida, aparelho desligando com carga restante, aquecimento excessivo e bateria inchada. Fazemos teste na loja.",
-    },
-    {
-      question: "A bateria nova do iPad tem garantia?",
-      answer:
-        "Sim. A troca de bateria de iPad na NJCELL inclui garantia de 6 meses sobre o serviço e a peça instalada.",
-    },
-    {
-      question: "Vocês trocam bateria de iPad Pro e iPad Air?",
-      answer:
-        "Sim. Realizamos troca de bateria para diferentes modelos de iPad em Sorocaba, sempre com diagnóstico prévio.",
-    },
-  ],
-  "conserto-apple-watch-sorocaba": [
-    {
-      question: "Vocês consertam Apple Watch em Sorocaba?",
-      answer:
-        "Sim. Realizamos conserto de Apple Watch com troca de tela e diagnóstico técnico para diferentes séries e modelos.",
-    },
-    {
-      question: "Apple Watch molhado tem conserto?",
-      answer:
-        "Depende do tempo e da extensão do dano. Avaliamos cada caso na NJCELL antes de indicar o reparo.",
-    },
-    {
-      question: "Quais modelos de Apple Watch vocês atendem?",
-      answer:
-        "Atendemos Apple Watch Series, SE e modelos recentes. O orçamento depende da série e do tipo de reparo necessário.",
-    },
-  ],
-  "troca-de-tela-apple-watch-sorocaba": [
-    {
-      question: "Vocês trocam tela de Apple Watch trincada?",
-      answer:
-        "Sim. Fazemos troca de tela e vidro de Apple Watch em Sorocaba para relógios com display quebrado ou touch com falha.",
-    },
-    {
-      question: "A troca de tela afeta a resistência à água?",
-      answer:
-        "Após o reparo, testamos o funcionamento do relógio. Informamos sobre cuidados e limitações conforme o modelo e o serviço realizado.",
-    },
-    {
-      question: "Quanto custa trocar a tela do Apple Watch?",
-      answer:
-        "O valor varia conforme a série do relógio. Fazemos orçamento gratuito após avaliar o aparelho na NJCELL.",
     },
   ],
 };

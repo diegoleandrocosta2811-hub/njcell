@@ -70,20 +70,26 @@ export default function HomeServices() {
             </DeviceFloat>
 
             <div className={CARD_BODY_CLASS}>
-              <h3 className="mb-2 text-2xl font-bold text-white">iPhone</h3>
+              <h3 className="mb-2 text-2xl font-bold text-white">Tela, bateria e câmeras</h3>
               <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-nj-accent">
-                iOS
+                iPhone
               </p>
               <p className="mb-6 flex-1 leading-relaxed text-gray-300">
-              Substituição de tela, vidro, tampa traseira e câmeras, bateria, recuperação de placa,
-              Face ID, conectores Tipo C e Lightning. Ajustes gerais para todos os modelos de
-              iPhones.
+                Substituição de tela, vidro, tampa traseira, câmeras e bateria, com peças em
+                estoque e muitos serviços prontos em até 30 minutos, para todos os modelos de
+                iPhone.
               </p>
               <div className="mt-auto flex flex-col gap-3">
                 <WhatsAppButton label="Solicitar Orçamento!" />
                 <div className="flex flex-wrap gap-x-5 gap-y-1">
+                  <ServiceCardLink href="/troca-de-tela-sorocaba">
+                    Troca de tela
+                  </ServiceCardLink>
+                  <ServiceCardLink href="/troca-de-bateria-sorocaba">
+                    Bateria
+                  </ServiceCardLink>
                   <ServiceCardLink href="/conserto-iphone-sorocaba">
-                    Saiba mais sobre iPhone
+                    Conserto iPhone
                   </ServiceCardLink>
                 </div>
               </div>
@@ -93,33 +99,36 @@ export default function HomeServices() {
           <article className="relative flex h-full flex-col overflow-visible">
             <DeviceFloat>
               <SiteImage
-                src="/images/conserto-ipad-sorocaba-njcell.png"
-                alt="Conserto de iPad em Sorocaba"
-                imageTitle="Conserto de iPad Sorocaba - NJCELL"
-                width={505}
-                height={555}
+                src="/images/ads-iphone-ios.png"
+                alt="Reparo em placa, Face ID e conector de iPhone em Sorocaba"
+                imageTitle="Reparos avançados de iPhone Sorocaba - NJCELL"
+                width={900}
+                height={760}
                 sizes="(max-width: 768px) 80vw, 380px"
                 className={DEVICE_IMAGE_CLASS}
               />
             </DeviceFloat>
 
             <div className={CARD_BODY_CLASS}>
-              <h3 className="mb-2 text-2xl font-bold text-white">iPad e Apple Watch</h3>
+              <h3 className="mb-2 text-2xl font-bold text-white">Placa, Face ID e conector</h3>
               <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-nj-accent">
-                iPadOS & watchOS
+                Reparos avançados
               </p>
               <p className="mb-6 flex-1 leading-relaxed text-gray-300">
-                Troca de tela de iPad e Apple Watch, troca de bateria de iPad e Apple Watch,
-                conector, componentes e ajustes gerais.
+                Recuperação de placa e microsoldagem, reparo de Face ID, troca de conector Tipo C
+                e Lightning e diagnóstico de iPhone que não liga ou molhou.
               </p>
               <div className="mt-auto flex flex-col gap-3">
                 <WhatsAppButton label="Solicitar Orçamento!" />
                 <div className="flex flex-wrap gap-x-5 gap-y-1">
-                  <ServiceCardLink href="/conserto-ipad-sorocaba">
-                    Conserto iPad
+                  <ServiceCardLink href="/reparo-em-placa-sorocaba">
+                    Reparo em placa
                   </ServiceCardLink>
-                  <ServiceCardLink href="/conserto-apple-watch-sorocaba">
-                    Apple Watch
+                  <ServiceCardLink href="/conserto-face-id-sorocaba">
+                    Face ID
+                  </ServiceCardLink>
+                  <ServiceCardLink href="/troca-de-conector-sorocaba">
+                    Conector
                   </ServiceCardLink>
                 </div>
               </div>

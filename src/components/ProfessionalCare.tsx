@@ -15,7 +15,7 @@ const features = [
   {
     title: "Peças em estoque",
     description:
-      "Reposição para iPhone, iPad e Apple Watch disponível na loja, à disposição do técnico para conserto imediato em diversos serviços.",
+      "Peças de reposição para iPhone disponíveis na loja, à disposição do técnico para conserto imediato em diversos serviços.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-10 w-10">
         <path d="M12 2l3 7h7l-5.5 4.5 2 7L12 17l-6.5 3.5 2-7L2 9h7z" />

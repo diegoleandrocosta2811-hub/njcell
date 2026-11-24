@@ -57,4 +57,4 @@ export const WARRANTY_MONTHS = 6;
 export const MAP_EMBED_URL =
   "https://maps.google.com/maps?q=Rua+Vinte+e+Oito+de+Outubro,+120+-+Jardim+do+Pa%C3%A7o,+Sorocaba+-+SP&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
-export const BRANDS = ["iPhone", "iPad", "Apple Watch"] as const;
+export const BRANDS = ["iPhone"] as const;

@@ -18,7 +18,7 @@ export default function ServicosPage() {
 
       <Hero
         title="Serviços de assistência Apple em Sorocaba"
-        subtitle="Diagnóstico, troca de peças e reparos especializados para iPhone, iPad e Apple Watch na NJCELL."
+        subtitle="Diagnóstico, troca de peças e reparos especializados para todos os modelos de iPhone na NJCELL."
         headingId="servicos-hero-heading"
       />
 
