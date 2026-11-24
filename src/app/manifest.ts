@@ -11,7 +11,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${COMPANY_NAME} ${COMPANY_TAGLINE}`,
     short_name: COMPANY_NAME,
     description:
-      "Assistência técnica Apple em Sorocaba. Conserto de iPhone, iPad e Apple Watch.",
+      "Assistência técnica de iPhone em Sorocaba. Troca de tela, bateria, câmeras e reparo em placa.",
     start_url: "/",
     scope: "/",
     display: "standalone",

@@ -88,8 +88,33 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/conserto-ipad-sorocaba",
+        destination: "/servicos",
+        permanent: true,
+      },
+      {
+        source: "/troca-de-tela-ipad-sorocaba",
+        destination: "/servicos",
+        permanent: true,
+      },
+      {
+        source: "/troca-de-bateria-ipad-sorocaba",
+        destination: "/servicos",
+        permanent: true,
+      },
+      {
+        source: "/conserto-apple-watch-sorocaba",
+        destination: "/servicos",
+        permanent: true,
+      },
+      {
+        source: "/troca-de-tela-apple-watch-sorocaba",
+        destination: "/servicos",
+        permanent: true,
+      },
+      {
         source: "/troca-de-bateria-apple-watch-sorocaba",
-        destination: "/conserto-apple-watch-sorocaba",
+        destination: "/servicos",
         permanent: true,
       },
       {

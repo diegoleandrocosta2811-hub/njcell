@@ -36,8 +36,7 @@ export default function HomeHero() {
             className="mb-5 text-[2rem] font-extrabold leading-[1.12] tracking-tight md:mb-6 md:text-5xl md:font-bold md:leading-tight md:tracking-normal lg:mb-6 lg:text-[3.25rem] lg:leading-[1.15]"
           >
             Soluções rápidas para seu{" "}
-            <span className="font-extrabold text-nj-accent md:font-bold">iPhone</span> e{" "}
-            <span className="font-extrabold text-nj-accent md:font-bold">iPad</span> em Sorocaba
+            <span className="font-extrabold text-nj-accent md:font-bold">iPhone</span> em Sorocaba
           </h1>
           <p className="mx-auto mb-7 max-w-xl text-[1.0625rem] font-medium leading-[1.65] text-white/95 md:mb-7 md:text-xl md:font-normal md:leading-relaxed md:text-gray-200 lg:mx-0 lg:mb-8">
             Na NJCELL, seu aparelho Apple não fica parado! No iPhone, fazemos substituição

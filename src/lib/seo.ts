@@ -167,9 +167,9 @@ export function buildServiceMetadata(service: Service): Metadata {
 }
 
 export const homeSeo: PageSeo = {
-  title: "NJCELL | Assistência Técnica iPhone e iPad Sorocaba",
+  title: "NJCELL | Assistência Técnica iPhone Sorocaba",
   description:
-    "Assistência técnica Apple em Sorocaba. Conserto de iPhone, iPad e Apple Watch. Troca de tela, bateria, conectores e reparos com atendimento especializado.",
+    "Assistência técnica de iPhone em Sorocaba. Troca de tela, bateria, conectores e reparos com atendimento especializado.",
   path: "/",
   ogImage: SITE_OG_IMAGE,
   ogImageWidth: SITE_OG_WIDTH,
@@ -179,7 +179,7 @@ export const homeSeo: PageSeo = {
 export const contactSeo: PageSeo = {
   title: "Contato NJCELL | Assistência Apple em Sorocaba",
   description:
-    "Fale com a NJCELL em Sorocaba pelo WhatsApp ou visite nossa loja. Assistência técnica para iPhone, iPad e Apple Watch com agilidade e garantia.",
+    "Fale com a NJCELL em Sorocaba pelo WhatsApp ou visite nossa loja. Assistência técnica de iPhone com agilidade e garantia.",
   path: "/contato",
   ogImage: SITE_OG_IMAGE,
   ogImageWidth: SITE_OG_WIDTH,
@@ -189,7 +189,7 @@ export const contactSeo: PageSeo = {
 export const servicosSeo: PageSeo = {
   title: "Serviços de Assistência Apple em Sorocaba | NJCELL",
   description:
-    "Todos os serviços da NJCELL em Sorocaba: conserto de iPhone, iPad e Apple Watch. Troca de tela, bateria, conector e reparo em placa com garantia.",
+    "Todos os serviços da NJCELL em Sorocaba: conserto de iPhone. Troca de tela, bateria, conector e reparo em placa com garantia.",
   path: "/servicos",
   ogImage: SITE_OG_IMAGE,
   ogImageWidth: SITE_OG_WIDTH,
