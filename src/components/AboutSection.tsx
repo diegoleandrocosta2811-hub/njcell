@@ -31,7 +31,7 @@ export default function AboutSection() {
                 <div className="relative min-h-[130px] overflow-hidden rounded-2xl">
                   <SiteImage
                     src="/images/store-lab-1.jpg"
-                    alt="Laboratório técnico NJCELL para reparo de iPhone e Mac"
+                    alt="Laboratório técnico NJCELL para reparo de iPhone e iPad"
                     imageTitle="Laboratório técnico NJCELL Sorocaba"
                     fill
                     className="object-cover"
@@ -52,7 +52,7 @@ export default function AboutSection() {
 
               <p className="leading-relaxed text-gray-200">
                 Desde {FOUNDED_YEAR}, somos referência em Sorocaba e região quando
-                o assunto é cuidado com <strong className="text-white">iPhones e Macs</strong>.
+                o assunto é cuidado com <strong className="text-white">iPhones e iPads</strong>.
                 Nossa equipe é formada por especialistas em eletrônica, preparados
                 para resolver desde os problemas mais simples até os mais avançados,
                 sempre com transparência, confiança e agilidade. Mantemos peças de

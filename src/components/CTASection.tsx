@@ -9,7 +9,7 @@ type CTASectionProps = {
 
 export default function CTASection({
   title = "Precisa de assistência Apple em Sorocaba?",
-  description = "Fale com a NJCELL pelo WhatsApp e receba atendimento especializado para iPhone e MacBook. Diagnóstico e orçamento sem compromisso.",
+  description = "Fale com a NJCELL pelo WhatsApp e receba atendimento especializado para iPhone, iPad e Apple Watch. Diagnóstico e orçamento sem compromisso.",
   headingId = "cta-heading",
 }: CTASectionProps) {
   return (

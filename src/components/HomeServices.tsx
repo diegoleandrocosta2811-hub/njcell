@@ -93,24 +93,24 @@ export default function HomeServices() {
           <article className="relative flex h-full flex-col overflow-visible">
             <DeviceFloat>
               <SiteImage
-                src="/images/assistencia-ipad-macbook-sorocaba-njcell.png"
-                alt="Assistência iPad e MacBook em Sorocaba"
-                imageTitle="Assistência iPad e MacBook Sorocaba - NJCELL"
-                width={766}
-                height={433}
+                src="/images/conserto-ipad-sorocaba-njcell.png"
+                alt="Conserto de iPad em Sorocaba"
+                imageTitle="Conserto de iPad Sorocaba - NJCELL"
+                width={505}
+                height={555}
                 sizes="(max-width: 768px) 80vw, 380px"
                 className={DEVICE_IMAGE_CLASS}
               />
             </DeviceFloat>
 
             <div className={CARD_BODY_CLASS}>
-              <h3 className="mb-2 text-2xl font-bold text-white">iPad, MacBook e Apple Watch</h3>
+              <h3 className="mb-2 text-2xl font-bold text-white">iPad e Apple Watch</h3>
               <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-nj-accent">
-                iPadOS, macOS & watchOS
+                iPadOS & watchOS
               </p>
               <p className="mb-6 flex-1 leading-relaxed text-gray-300">
-                Troca de tela de iPad e Apple Watch, troca de bateria de iPad,
-                upgrade de memória, teclado, componentes e ajustes gerais para MacBook.
+                Troca de tela de iPad e Apple Watch, troca de bateria de iPad e Apple Watch,
+                conector, componentes e ajustes gerais.
               </p>
               <div className="mt-auto flex flex-col gap-3">
                 <WhatsAppButton label="Solicitar Orçamento!" />
@@ -120,9 +120,6 @@ export default function HomeServices() {
                   </ServiceCardLink>
                   <ServiceCardLink href="/conserto-apple-watch-sorocaba">
                     Apple Watch
-                  </ServiceCardLink>
-                  <ServiceCardLink href="/assistencia-macbook-sorocaba">
-                    MacBook
                   </ServiceCardLink>
                 </div>
               </div>

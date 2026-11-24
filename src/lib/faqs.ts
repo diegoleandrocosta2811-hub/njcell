@@ -28,7 +28,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "A NJCELL atende quais aparelhos Apple em Sorocaba?",
     answer:
-      "Atendemos iPhone, iPad, MacBook e Apple Watch. Realizamos assistência técnica especializada em produtos Apple em Sorocaba, com diagnóstico, troca de peças e reparo em placa.",
+      "Atendemos iPhone, iPad e Apple Watch. Realizamos assistência técnica especializada em produtos Apple em Sorocaba, com diagnóstico, troca de peças e reparo em placa.",
   },
   iphoneModelsFaq,
   {
@@ -39,7 +39,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "A NJCELL tem peças de reposição em estoque?",
     answer:
-      "Sim. Mantemos peças de reposição em estoque para iPhone, iPad, MacBook e Apple Watch, à disposição do técnico na loja. Isso evita espera por encomendas e possibilita conserto imediato em diversos serviços, como troca de tela, bateria e conector.",
+      "Sim. Mantemos peças de reposição em estoque para iPhone, iPad e Apple Watch, à disposição do técnico na loja. Isso evita espera por encomendas e possibilita conserto imediato em diversos serviços, como troca de tela, bateria e conector.",
   },
   {
     question: "Os reparos da NJCELL têm garantia?",
@@ -47,7 +47,7 @@ export const homeFaqs: FaqItem[] = [
       "Sim. Os serviços realizados na NJCELL contam com garantia de 6 meses, conforme o tipo de reparo e peça utilizada. Tudo é explicado no orçamento antes da aprovação.",
   },
   {
-    question: "Preciso agendar para levar meu iPhone ou MacBook?",
+    question: "Preciso agendar para levar meu iPhone ou iPad?",
     answer:
       "Não é obrigatório agendar. Você pode falar conosco pelo WhatsApp ou vir direto à loja em Sorocaba para diagnóstico e orçamento sem compromisso.",
   },
@@ -219,23 +219,6 @@ export const serviceFaqs: Record<string, FaqItem[]> = {
       question: "Fazem diagnóstico de iPhone com problema na placa?",
       answer:
         "Sim. Nossa equipe técnica avalia iPhones que não ligam, reiniciam sozinhos ou apresentam falhas avançadas.",
-    },
-  ],
-  "assistencia-macbook-sorocaba": [
-    {
-      question: "Quais problemas de MacBook vocês resolvem?",
-      answer:
-        "MacBook lento, tela com defeito, bateria ruim, teclado com falha, problemas de sistema e diagnóstico de placa em Sorocaba.",
-    },
-    {
-      question: "Fazem upgrade de memória em Mac?",
-      answer:
-        "Dependendo do modelo, realizamos upgrade de memória, substituição de componentes e ajustes no macOS.",
-    },
-    {
-      question: "MacBook molhado tem conserto?",
-      answer:
-        "Avaliamos cada caso. Oxidação e curto na placa podem ser tratados com diagnóstico técnico especializado na NJCELL.",
     },
   ],
   "conserto-ipad-sorocaba": [
